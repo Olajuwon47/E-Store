@@ -87,13 +87,13 @@ export default function Store() {
   return (
     <>
     {/* Button to open the dialog */}
-    <button
+    {/*<button
       type="button"
       onClick={() => setOpen(true)}
       className="rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
     >
       Quick View
-    </button>
+    </button>*/}
 
        {/* Product List */}
        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
