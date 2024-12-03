@@ -10,9 +10,11 @@ import Cart from './pages/cart.js';
 import Login from './pages/Login/Login.js';
 import Signup from './pages/Login/Sign up.js';
 import Currency from './pages/Currency.js';
+import SearchBox from './pages/SearchBox.js';
 import Collection from './components/collection.js';
-import Team from './components/team.js';
+//import Team from './components/team.js';
 import Newsletter from './components/newletter.js';
+import Carousel from './components/Carousel.js';
 
 
 const navigation = {
@@ -117,12 +119,7 @@ export default function Nav() {
                   </Link>
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <Link to="/contact" className="text-sm font-medium text-black hover:text-gray-800">
-                  Contact Us
-                  </Link>
-                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
-                </div>
+              
                 {/* Search */}
                 <div className="flex lg:ml-6">
                   <Link to="/SearchBox" className="p-2 text-black hover:text-gray-500">
@@ -152,10 +149,11 @@ export default function Nav() {
         <Route path="/Login" element={<Login/>} />
         <Route path="/Sign up" element={<Signup/>} />
         <Route path="/ Currency" element={< Currency/>} />
+        <Route path="/SearchBox" element={<SearchBox onSearch={(query) => console.log(`Searching for ${query}`)} />} />
       </Routes>
       <Collection />
-      <Team />
-      <Newsletter />   
+      <Carousel/>
+      <Newsletter />
     </div>
   );
 }
