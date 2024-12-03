@@ -68,7 +68,7 @@ export default function Nav() {
       </Dialog>
       {/* Desktop navigation */}
       <header className="relative bg-green-500">
-        <p className="flex h-10 items-center justify-center bg-lime-400 px-4 text-sm font-medium text-black sm:px-6 lg:px-8">
+        <p className="flex h-10 items-center justify-center bg-lime-400 px-4  beatFade text-sm font-medium text-black sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
