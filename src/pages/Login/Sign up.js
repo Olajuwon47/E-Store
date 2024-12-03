@@ -27,7 +27,7 @@ export default function Signup() {
   };
   return (
     <>  
-      <div className="flex min-h-full bg-teal-500 flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
             Sign Up
@@ -40,6 +40,7 @@ export default function Signup() {
           <label className="block text-sm font-medium text-gray-900">Username</label>
           <div className="relative mt-2">
             <ion-icon name="person-outline" className="absolute top-1/2 left-3 -translate-y-1/2 text-black"></ion-icon>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
             <input type="text" required className="pl-10 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"/>
           </div>
         </div>
@@ -65,22 +66,11 @@ export default function Signup() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="/Forgot-password" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                  <a href="/Forgot-password" className="font-semibold text-lime-500 hover:text-lime-700">
                     Forgot password?
                   </a>
                 </div>
-              </div>
-                    <div id="confirm-password-field">
-                <label className="block text-sm font-medium text-gray-900">Confirm Password</label>
-                <div className="relative mt-2">
-                  <ion-icon className="lock-closed-outline absolute top-1/2 left-3 -translate-y-1/2 text-gray-400"></ion-icon>
-                  <input type="password" required className="pl-10 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"/>
-                  <button type="button" className="absolute inset-y-0 right-3 flex items-center text-gray-400 focus:outline-none">
-                    <ion-icon className="eye-off-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
-
+              </div>                    
               <div className="mt-2">
                 <input
                   id="password"
@@ -93,10 +83,21 @@ export default function Signup() {
               </div>
             </div>
 
+            <div id="confirm-password-field">
+                <label className="block text-sm font-medium text-gray-900">Confirm Password</label>
+                <div className="relative mt-2">
+                  <ion-icon className="lock-closed-outline absolute top-1/2 left-3 -translate-y-1/2 text-gray-400"></ion-icon>
+                  <input type="password" required className="pl-10 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"/>
+                  <button type="button" className="absolute inset-y-0 right-3 flex items-center text-gray-400 focus:outline-none">
+                    <ion-icon className="eye-off-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-lime-950 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign Up
               </button>

@@ -2,17 +2,24 @@
 import { useState } from 'react';
 import { Dialog, DialogBackdrop, DialogPanel, PopoverGroup } from '@headlessui/react';
 import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
+import Store from './pages/store.js'; 
+import Cart from './pages/cart.js';
+//import Orders from './pages/orders.js';
+//import Track from './pages/track.js';
+import Login from './pages/Login/Login.js';
+import Signup from './pages/Login/Sign up.js';
+import Currency from './pages/Currency.js';
 import Collection from './components/collection.js';
 import Team from './components/team.js';
 import Newsletter from './components/newletter.js';
+
 
 const navigation = {
   pages: [
     { name: 'Stores', href: '/store' },
     { name: 'Order', href: '/order' },
     { name: 'Track', href: '/track' },
-    { name: 'Contact Us', href: '/contract' },
   ],
 };
 export default function Nav() {
@@ -110,6 +117,12 @@ export default function Nav() {
                   </Link>
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                 </div>
+                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  <Link to="/contact" className="text-sm font-medium text-black hover:text-gray-800">
+                  Contact Us
+                  </Link>
+                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
+                </div>
                 {/* Search */}
                 <div className="flex lg:ml-6">
                   <Link to="/SearchBox" className="p-2 text-black hover:text-gray-500">
@@ -131,10 +144,18 @@ export default function Nav() {
           </div>
         </nav>
       </header>
-      {/* Page content */}
+      <Routes>
+      <Route path="/store" element={<Store/>} />
+        <Route path="/cart" element={<Cart/>} />
+         {/*<Route path="/orders" element={<Orders />} />
+        <Route path="/track" element={<Track />} />*/}
+        <Route path="/Login" element={<Login/>} />
+        <Route path="/Sign up" element={<Signup/>} />
+        <Route path="/ Currency" element={< Currency/>} />
+      </Routes>
       <Collection />
       <Team />
-      <Newsletter />
+      <Newsletter />   
     </div>
   );
 }
