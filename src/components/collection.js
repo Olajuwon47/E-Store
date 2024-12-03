@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 export default function Collection() {
     return (
       <div className="relative overflow-hidden bg-white">
@@ -81,12 +82,12 @@ export default function Collection() {
                   </div>
                 </div>
   
-                <a
-                  href="/contract"
+                <Link 
+                  to="/store"
                   className="inline-block rounded-md border border-transparent bg-green-800 px-8 py-3 text-center font-medium text-white hover:bg-emerald-600"
                 >
                   Shop Collection
-                </a>
+                </Link>
               </div>
             </div>
           </div>
