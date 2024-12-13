@@ -66,6 +66,62 @@ const Carousel = () => {
             style={{ height: "300px", objectFit: "cover" }}
           />
         </div>
+        <div className="carousel-item">
+          <img
+            src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
+            className="d-block w-100"
+            alt="Slide 7"
+            style={{ height: "300px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            src="https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png"
+            className="d-block w-100"
+            alt="Slide 7"
+            style={{ height: "300px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            src="https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png"
+            className="d-block w-100"
+            alt="Slide 7"
+            style={{ height: "300px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            src="https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png"
+            className="d-block w-100"
+            alt="Slide 7"
+            style={{ height: "300px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
+            className="d-block w-100"
+            alt="Slide 7"
+            style={{ height: "300px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png"
+            className="d-block w-100"
+            alt="Slide 7"
+            style={{ height: "300px", objectFit: "cover" }}
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            src="https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png"
+            className="d-block w-100"
+            alt="Slide 7"
+            style={{ height: "300px", objectFit: "cover" }}
+          />
+        </div>
       </div>
       <button
         className="carousel-control-prev"
