@@ -4,10 +4,11 @@ const Carousel = () => {
   return (
     <div
       id="carouselExampleRide"
-      className="carousel slide bg-green-200"
+      className="carousel slide bg-green-100"
       data-bs-ride="carousel"
       style={{ maxWidth: "600px", margin: "0 auto" }} // Center and limit the width
     >
+      
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img

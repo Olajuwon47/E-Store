@@ -25,6 +25,11 @@ export default function Signup() {
       console.error("Error during social login:", error);
     }
   };
+
+  const toggleForm = () => {
+    console.log('Toggle form logic here');
+  };
+  
   return (
     <>  
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -39,8 +44,10 @@ export default function Signup() {
           <div id="username-field">
           <label className="block text-sm font-medium text-gray-900">Username</label>
           <div className="relative mt-2">
-            <ion-icon name="person-outline" className="absolute top-1/2 left-3 -translate-y-1/2 text-black"></ion-icon>
-            <input type="text" required className="pl-10 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"/>
+            <input type="text"
+             id="username-signup"
+             required
+              className="pl-10 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"/>
           </div>
         </div>
             <div>
@@ -49,9 +56,8 @@ export default function Signup() {
               </label>
               <div className="mt-2">
                 <input
-                  id="email"
-                  name="email"
-                  type="email"
+                  id="email-signup"
+                  name="email1"
                   required
                   autoComplete="email"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
@@ -72,7 +78,7 @@ export default function Signup() {
               </div>                    
               <div className="mt-2">
                 <input
-                  id="password"
+                  id="password-signup"
                   name="password"
                   type="password"
                   required
@@ -86,7 +92,11 @@ export default function Signup() {
                 <label className="block text-sm font-medium text-gray-900">Confirm Password</label>
                 <div className="relative mt-2">
                   <ion-icon className="lock-closed-outline absolute top-1/2 left-3 -translate-y-1/2 text-gray-400"></ion-icon>
-                  <input type="password" required className="pl-10 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"/>
+                  <input
+                   type="password"
+                   required 
+                   id="confirm-password-signup" 
+                   className="pl-10 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"/>
                   <button type="button" className="absolute inset-y-0 right-3 flex items-center text-gray-400 focus:outline-none">
                     <ion-icon className="eye-off-outline"></ion-icon>
                   </button>
@@ -102,7 +112,7 @@ export default function Signup() {
               </button>
             </div>
             <p className="text-center text-sm text-gray-950">
-            <span id="toggle-text">Already have an account?</span> <a href="/Login" id="toggle-link" className="text-gray-950 hover:text-slate-50 font-semibold" onclick="toggleForm()">Sign in</a></p>          
+            <span id="toggle-text">Already have an account?</span> <a href="/Login" id="toggle-link" className="text-gray-950 hover:text-slate-50 font-semibold" onClick={toggleForm}>Sign in</a></p>          
           </form>
 
           <div className="mt-6">

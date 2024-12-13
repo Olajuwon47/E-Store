@@ -1,20 +1,29 @@
-//import { BrowserRouter } from 'react-router-dom';
-import Nav from './nav.js';
+import Collection from './components/collection.js';
+//import Team from './components/team.js';
+import Newsletter from './components/newletter.js';
+import Carousel from './components/Carousel.js';
+import Contract from './components/contract.js';
+import Home from './home.js';
 import Footer from './components/Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import ErrorBoundary from './ErrorBoundary';
+import { CartProvider } from './pages/Cart/cartcontext.js';
 
+
+ 
 function App() {
+  
   return (
-    <ErrorBoundary>
-    <div>
-      <Nav />
-      <Footer />
-    </div>
-    </ErrorBoundary>
-
+    <>
+      <CartProvider> 
+        <Home />
+        <Collection />
+        <Carousel/>
+        <Newsletter />
+        <Contract/>
+        <Footer/>
+     </CartProvider>
+   </>
   );
 }
-
 export default App;

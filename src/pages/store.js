@@ -3,32 +3,11 @@ import { useState, useEffect } from 'react'
 import { Dialog, RadioGroup } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/20/solid'
-
-/*const product = {
-  const [products, setproducts] = useState(product.sizes[2])
-  name: 'Basic Tee 6-Pack ',
-  price: '$192',
-  rating: 3.9,
-  reviewCount: 117,
-  href: '#',
-  imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-quick-preview-02-detail.jpg',
-  imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
-  colors: [
-    { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-    { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-    { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-  ],
-  sizes: [
-    { name: 'XXS', inStock: true },
-    { name: 'XS', inStock: true },
-    { name: 'S', inStock: true },
-    { name: 'M', inStock: true },
-    { name: 'L', inStock: true },
-    { name: 'XL', inStock: true },
-    { name: 'XXL', inStock: true },
-    { name: 'XXXL', inStock: false },
-  ],
-}*/
+//import Cart from './cart.js'
+import { useCart } from './Cart/cartcontext.js';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+//import RootLayout from './layout/RootLayout.js';
 
 export default function Store() {
   const [open, setOpen] = useState(false)
@@ -37,45 +16,40 @@ export default function Store() {
   const [selectedSize, setSelectedSize] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  /*const [selectedColor, setSelectedColor] = useState(product.colors[0])
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2])*/
+  //const { addToCart } = useContext(useCart)
+  const { addToCart } = useCart();
   
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch('/data/products.json')
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
+    //const Products = localStorage.getItem("Products");
+    async function fetchProducts() {
+      // Check if data is cached in Local Storage
+      const cachedData = localStorage.getItem('/data/products.json');
+      if (cachedData) {
+          console.log('Products');
+          return JSON.parse(cachedData);
+      }
+        // Fetch data from the API if not cached
+    const response = await fetch('http://localhost:3000/data/products.json');
+    const data = await response.json();
+       // Set products and default selected product
+       setProducts(data);
+       setSelectedProduct(data[0]);
+       setSelectedColor(data[0]?.colors?.[0] || null);
+       setSelectedSize(data[0]?.sizes?.[0] || null);
+     } try {
+      
+     } catch (error) {
+       console.error('Failed to fetch products:', error);
+     } finally {
+       setLoading(false);
+     }
+   fetchProducts();
+ }, []);
 
-         // Validate the fetched data
-         if (!Array.isArray(data) || data.length === 0) {
-          throw new Error('Products data is not an array or is empty');
-        }
-
-         // Set products and default selected product
-          setProducts(data);
-          setSelectedProduct(data[0]);
-          setSelectedColor(data[0]?.colors?.[0] || null);
-          setSelectedSize(data[0]?.sizes?.[0] || null);
-        } catch (error) {
-          console.error('Failed to fetch products:', error);
-        } finally {
-          setLoading(false);
-        }
-      };
-  
-      fetchProducts();
-    }, []);
-       
-
-  
     // Render loading state
   if (loading) {
     return <h4 className='items-center justify-center' >Loading products...</h4>;
   }
-
   // Render fallback if no products are available
   if (!products || products.length === 0) {
     return <div>No products available.</div>;
@@ -84,17 +58,23 @@ export default function Store() {
   return classes.filter(Boolean).join(' ')
 }
 
+const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`, {
+  position: "top-center",
+  autoClose: 2000,
+  hideProgressBar: true,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  theme: 'colored',
+  style: {
+    backgroundColor: '#fff',
+    color: '#000',
+  }
+  });
+
   return (
     <>
-    {/* Button to open the dialog */}
-    {/*<button
-      type="button"
-      onClick={() => setOpen(true)}
-      className="rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
-    >
-      Quick View
-    </button>*/}
-
+    <ToastContainer/>
        {/* Product List */}
        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         {products.map((product) => (
@@ -105,7 +85,7 @@ export default function Store() {
               setSelectedProduct(product);
               setSelectedColor(product.colors?.[0] || null);
               setSelectedSize(product.sizes?.[0] || null);
-              setOpen(true);
+               setOpen(true);
             }}
           >
             <img
@@ -114,7 +94,7 @@ export default function Store() {
               className="w-full h-48 object-cover rounded-md"
             />
             <h3 className="mt-4 text-lg font-bold text-gray-900">{product.name}</h3>
-            <p className="text-gray-700">${product.priceCents ? (product.priceCents / 100).toFixed(2) : 'N/A'}</p>
+            <p className="text-gray-700">${(product.priceCents / 100).toFixed(2)}</p>
           </div>
         ))}
       </div>
@@ -230,7 +210,10 @@ export default function Store() {
                 {/* Add to bag button */}
                 <button
                   type="button"
-                  className="mt-6 w-full rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+                  onClick={()=>{ addToCart(products)
+                    notifyAddedToCart(products)}
+                  }
+                  className="mt-6 w-full rounded-md bg-lime-900 px-4 py-2 text-white hover:bg-lime-300"
                 >
                   Add to Cart
                 </button>
@@ -240,7 +223,8 @@ export default function Store() {
         </div>
       </div>
     </Dialog>
-     )}
+     )} 
   </> 
+  
   )
 }

@@ -25,6 +25,11 @@ export default function Login() {
       console.error("Error during social login:", error);
     }
   };
+
+  const toggleForm = () => {
+    console.log('Toggle form logic here');
+  };
+  
   return (
     <>   
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -42,9 +47,8 @@ export default function Login() {
               </label>
               <div className="mt-2">
                 <input
-                  id="email"
+                  id="email-login"
                   name="email"
-                  type="email"
                   required
                   autoComplete="email"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
@@ -65,7 +69,7 @@ export default function Login() {
               </div>
               <div className="mt-2">
                 <input
-                  id="password"
+                  id="password-login"
                   name="password"
                   type="password"
                   required
@@ -85,7 +89,7 @@ export default function Login() {
             </div>
             <p className="text-center text-sm text-gray-950">
             <span id="toggle-text">Don't have an account?</span>
-            <a href="/Sign up"id="toggle-link"  className="text-gray-950 hover:text-stone-50 font-semibold" onclick="toggleForm()" >Sign up</a></p>
+            <a href="/Sign up"id="toggle-link"  className="text-gray-950 hover:text-stone-50 font-semibold" onClick={toggleForm} >Sign up</a></p>
           </form>
 
           <div className="mt-6">
