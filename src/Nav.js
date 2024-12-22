@@ -2,19 +2,17 @@
 import { useState } from 'react';
 import { Dialog, DialogBackdrop, DialogPanel, PopoverGroup } from '@headlessui/react';
 import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link, Routes, Route } from "react-router-dom";
-import Store from './pages/store.js'; 
-import Cart from './pages/cart.js';
+import { Link } from "react-router-dom";
+/*import Store from '../pages/store.js'; 
+import Cart from '../pages/cart.js';
 //import Orders from './pages/orders.js';
 //import Track from './pages/track.js';
-import Login from './pages/Login/Login.js';
-import Signup from './pages/Login/Sign up.js';
-
-
-
+import Login from '../pages/Login/Login.js';
+import Signup from '../pages/Login/Sign up.js';*/
 
 const navigation = {
   pages: [
+    { name: 'Home ', href: '/Home' },
     { name: 'Stores', href: '/store' },
     { name: 'Order', href: '/order' },
     { name: 'Track', href: '/track' },
@@ -22,6 +20,11 @@ const navigation = {
 };
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount((prevCount) => prevCount + 1); // Increment the count
+  };
+    
   return (
     <div className="">
       {/* Mobile menu */}
@@ -83,10 +86,8 @@ export default function Nav() {
               </button>
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <Link to="/nav">
                   <span className="sr-only">Your Company</span>
-                  <img alt="Logo" src="../images/jaywon 1.jpg" className="h-8 w-auto" />
-                </Link>
+                  <img alt="Logo" src="../images/jaywon 1.jpg" className="h-8 w-auto"/> 
               </div>
               {/* Navigation Links */}
               <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
@@ -127,36 +128,34 @@ export default function Nav() {
                 </div>*/}
 
                 {/* Search */}
-<div className="flex lg:ml-6 items-center">
+                  <div className="flex lg:ml-6 items-center">
 
-    <span className="sr-only">Search</span>
-    <label htmlFor="search-input" className="cursor-pointer">
-      <span className="sr-only">Search</span>
-    </label>
-    <div className="relative">
-      <input
-        type="text"
-        name="search"
-        id="search-input"
-        className="pl-2 pr-8 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
-        placeholder="Search"
-      />
-      <MagnifyingGlassIcon
-        aria-hidden="true"
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
-      />
-    </div>
-  
-</div>
-
-
+                      <span className="sr-only">Search</span>
+                      <label htmlFor="search-input" className="cursor-pointer">
+                        <span className="sr-only">Search</span>
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="text"
+                          name="search"
+                          id="search-input"
+                          className="pl-2 pr-8 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500"
+                          placeholder="Search"
+                        />
+                        <MagnifyingGlassIcon
+                          aria-hidden="true"
+                          className="absolute top-1/2 right-2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
+                        />
+                      </div>
+                    
+                  </div>
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
                   <Link to="/cart" className="group -m-2 flex items-center p-2">
                     <img alt="Cart" src="../images/icons/cart-icon.png" className="h-8 w-auto" />
-                    <span className="ml-2 text-sm font-medium text-black group-hover:text-gray-800">
-                      0
+                    <span onClick={handleClick} className="ml-2 text-sm font-medium text-black group-hover:text-gray-800">
+                    {count}
                     </span>
                   </Link>
                 </div>
@@ -165,16 +164,7 @@ export default function Nav() {
           </div>
         </nav>
       </header>
-      <Routes>
-      <Route  >
-        <Route path="/store" element={<Store/>} />
-        <Route path="/cart" element={<Cart/>} />
-         {/*<Route path="/orders" element={<Orders />} />
-        <Route path="/track" element={<Track />} />*/}
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Sign up" element={<Signup/>} />
-      </Route>
-      </Routes>
+   
       
     </div>
   );
