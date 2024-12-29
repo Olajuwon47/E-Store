@@ -109,6 +109,12 @@ export default function Nav() {
                   </Link>
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                 </div>
+                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  <Link to="/Sign up" className="text-sm font-medium text-black hover:text-gray-800">
+                    Signup
+                  </Link>
+                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
+                </div>
               
                 {/* Search */}
                 {/* <div className="flex lg:ml-6 mdl-textfield mdl-js-textfield mdl-textfield--expandable">
