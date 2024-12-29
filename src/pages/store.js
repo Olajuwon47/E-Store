@@ -15,7 +15,7 @@ export default function Store() {
   const [selectedColor, setSelectedColor] = useState(null)
   const [selectedSize, setSelectedSize] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+  //const [loading, setLoading] = useState(true);
   //const { addToCart } = useContext(useCart)
   const { addToCart } = useCart();
   
@@ -41,15 +41,15 @@ export default function Store() {
      } catch (error) {
        console.error('Failed to fetch products:', error);
      } finally {
-       setLoading(false);
+       //setLoading(false);
      }
    fetchProducts();
  }, []);
 
     // Render loading state
-  if (loading) {
+  /*if (loading) {
     return <h4 className='items-center justify-center' >Loading products...</h4>;
-  }
+  }*/
   // Render fallback if no products are available
   if (!products || products.length === 0) {
     return <div>No products available.</div>;

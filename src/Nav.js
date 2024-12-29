@@ -12,7 +12,6 @@ import Signup from '../pages/Login/Sign up.js';*/
 
 const navigation = {
   pages: [
-    { name: 'Home ', href: '/Home' },
     { name: 'Stores', href: '/store' },
     { name: 'Order', href: '/order' },
     { name: 'Track', href: '/track' },
