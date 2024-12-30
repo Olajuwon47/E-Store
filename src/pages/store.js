@@ -16,10 +16,9 @@ export default function Store() {
   const [selectedSize, setSelectedSize] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null);
   //const [loading, setLoading] = useState(true);
-  //const { addToCart } = useContext(useCart)
   const { addToCart } = useCart();
   
-  useEffect(() => {
+  /*useEffect(() => {
     //const Products = localStorage.getItem("Products");
     async function fetchProducts() {
       // Check if data is cached in Local Storage
@@ -44,7 +43,44 @@ export default function Store() {
        //setLoading(false);
      }
    fetchProducts();
- }, []);
+ }, []);*/
+
+ useEffect(() => {
+    async function fetchProducts() {
+      try {
+        // Check if data is cached in Local Storage
+        const cachedData = localStorage.getItem('/data/products.json');
+        if (cachedData) {
+          console.log('Using cached products data');
+          const data = JSON.parse(cachedData);
+          setProducts(data);
+          setSelectedProduct(data[0]);
+          setSelectedColor(data[0]?.colors?.[0] || null);
+          setSelectedSize(data[0]?.sizes?.[0] || null);
+          return; // Exit early if cached data is used
+        }
+
+        // Fetch data from the API if not cached
+        const response = await fetch('http://localhost:3000/data/products.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        // Cache the fetched data and update state
+        localStorage.setItem('/data/products.json', JSON.stringify(data));
+        setProducts(data);
+        setSelectedProduct(data[0]);
+        setSelectedColor(data[0]?.colors?.[0] || null);
+        setSelectedSize(data[0]?.sizes?.[0] || null);
+      } catch (error) {
+        console.error('Failed to fetch products:', error);
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
 
     // Render loading state
   /*if (loading) {
