@@ -6,9 +6,12 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [])
-
+console.log(cartItems)
+const qua = cartItems.map(city=> city.quantity)
+//const [count, setCount] = useState(0);
   const addToCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
+    //console.log()
     if (isItemInCart) {
     setCartItems(
         cartItems.map((cartItem) => // if the item is already in the cart, increase the quantity of the item
@@ -66,7 +69,7 @@ useEffect(() => {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, getCartTotal }}
+      value={{ cartItems, addToCart, removeFromCart, getCartTotal, qua }}
     >
       {children}
     </CartContext.Provider>

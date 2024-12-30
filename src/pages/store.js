@@ -94,7 +94,7 @@ export default function Store() {
   return classes.filter(Boolean).join(' ')
 }
 
-const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`, {
+const notifyAddedToCart = (item) => toast.success(`${item} added to cart!`, {
   position: "top-center",
   autoClose: 2000,
   hideProgressBar: true,
@@ -112,7 +112,7 @@ const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`
     <>
     <ToastContainer/>
        {/* Product List */}
-       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3 bg-lime-100">
         {products.map((product) => (
           <div
             key={product.id}
@@ -129,7 +129,7 @@ const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`
               alt={product.name}
               className="w-full h-48 object-cover rounded-md"
             />
-            <h3 className="mt-4 text-lg font-bold text-gray-900">{product.name}</h3>
+            <h3 className="mt-4 text-lg font-bold text-black">{product.name}</h3>
             <p className="text-gray-700">${(product.priceCents / 100).toFixed(2)}</p>
           </div>
         ))}
@@ -139,15 +139,15 @@ const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`
        {selectedProduct && (
     <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
       {/* Overlay */}
-      <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+      <div className="fixed inset-0 bg-lime-50 bg-opacity-75 transition-opacity" />
 
       <div className="fixed inset-0 z-10 overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-          <Dialog.Panel className="relative w-full max-w-4xl transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8">
+          <Dialog.Panel className="relative w-full max-w-4xl transform overflow-hidden rounded-lg bg-gray-500 text-left shadow-xl transition-all sm:my-8">
             {/* Close button */}
             <button
               type="button"
-              className="absolute right-4 top-4 text-gray-400 hover:text-gray-500"
+              className="absolute right-4 top-4 text-gray-400 hover:text-black"
               onClick={() => setOpen(false)}
             >
               <span className="sr-only">Close</span>
@@ -174,19 +174,19 @@ const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`
                       <StarIcon
                         key={index}
                         className={classNames(
-                          selectedProduct?.rating?.stars > index ? 'text-green-600' : 'text-gray-200',
+                          selectedProduct?.rating?.stars > index ? 'text-black' : 'text-gray-200',
                           'h-5 w-5'                         
                         )}
                       />
                     ))}
                   </div>
-                  <p className="ml-2 text-sm text-gray-600">
+                  <p className="ml-2 text-sm text-black">
                   {selectedProduct?.rating?.count || 0}reviews</p>
                 </div>
 
                 {/* Colors */}
                 <div className="mt-6">
-                  <h3 className="text-sm font-medium text-gray-900">Color</h3>
+                  <h3 className="text-sm font-medium text-black">Color</h3>
                   <RadioGroup
                     value={selectedColor}
                     onChange={setSelectedColor}
@@ -216,7 +216,7 @@ const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`
 
                 {/* Sizes */}
                 <div className="mt-6">
-                  <h3 className="text-sm font-medium text-gray-900">Size</h3>
+                  <h3 className="text-sm font-medium text-black">Size</h3>
                   <RadioGroup
                     value={selectedSize}
                     onChange={setSelectedSize}
@@ -247,9 +247,9 @@ const notifyAddedToCart = (item) => toast.success(`${item.title} added to cart!`
                 <button
                   type="button"
                   onClick={()=>{ addToCart(products)
-                    notifyAddedToCart(products)}
+                    notifyAddedToCart(selectedProduct.name)}
                   }
-                  className="mt-6 w-full rounded-md bg-lime-900 px-4 py-2 text-white hover:bg-lime-300"
+                  className="mt-6 w-full rounded-md bg-lime-50 px-4 py-2 text-black hover:bg-lime-100"
                 >
                   Add to Cart
                 </button>

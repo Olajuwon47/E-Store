@@ -1,5 +1,6 @@
-'use client';
+//'use client';
 import { useState } from 'react';
+import { useCart } from './pages/Cart/cartcontext.js';
 import { Dialog, DialogBackdrop, DialogPanel, PopoverGroup } from '@headlessui/react';
 import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from "react-router-dom";
@@ -19,10 +20,11 @@ const navigation = {
 };
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const [count, setCount] = useState(0);
-  const handleClick = () => {
+   const { qua } = useCart()
+  //const [count, setCount] = useState(0);
+  /*Aconst handleClick = () => {
     setCount((prevCount) => prevCount + 1); // Increment the count
-  };
+  };*/
     
   return (
     <div className="">
@@ -68,8 +70,8 @@ export default function Nav() {
         </div>
       </Dialog>
       {/* Desktop navigation */}
-      <header className="relative bg-green-500">
-        <p className="flex h-10 items-center justify-center bg-lime-400 px-4  beatFade text-sm font-medium text-black sm:px-6 lg:px-8">
+      <header className="relative bg-lime-100">
+        <p className="flex h-10 items-center justify-center  px-4  beatFade text-sm font-medium text-black sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -134,7 +136,6 @@ export default function Nav() {
 
                 {/* Search */}
                   <div className="flex lg:ml-6 items-center">
-
                       <span className="sr-only">Search</span>
                       <label htmlFor="search-input" className="cursor-pointer">
                         <span className="sr-only">Search</span>
@@ -159,8 +160,8 @@ export default function Nav() {
                 <div className="ml-4 flow-root lg:ml-6">
                   <Link to="/cart" className="group -m-2 flex items-center p-2">
                     <img alt="Cart" src="../images/icons/cart-icon.png" className="h-8 w-auto" />
-                    <span onClick={handleClick} className="ml-2 text-sm font-medium text-black group-hover:text-gray-800">
-                    {count}
+                    <span className="ml-2 text-sm font-medium text-black group-hover:text-gray-800">
+                    {qua}
                     </span>
                   </Link>
                 </div>

@@ -26,10 +26,6 @@ export default function Cart() {
   const handleRemoveFromCart = (item) => {
     removeFromCart(item)
     notifyRemovedFromCart(item)
-    /*toast.error(`${item.name} removed from cart!`, {
-      position: 'top-center',
-      autoClose: 2000,
-    });*/
   }
 
   const subtotal = cartItems.reduce(
@@ -37,45 +33,18 @@ export default function Cart() {
     0
   ) / 100;
   
- // const [products, setProducts] = useState(initialProducts);
-  // Calculate subtotal dynamically
-  /*const subtotal = cart.reduce((total, product) => total + product.price * product.quantity, 0)
-   // Update product quantity
-   const updateQuantity = (id, action) => {
-    updateCart(id, action === 'increase' ? 1 : -1);
-  };
-  // Remove a product from the cart
-  const removeProduct = (id) => {
-    removeFromCart(id);
-  };*/
-  // Update product quantity
- /* const updateQuantity = (id, action) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        Products.id === id
-          ? { ...product, quantity: action === 'increase' ? Products.quantity + 1 : Math.max(1, Products.quantity - 1) }
-          : product
-      )
-    )
-  }
-
-  // Remove a product from the cart
-  const removeProduct = (id) => {
-    setProducts((prevProducts) => prevProducts.filter((Products) => Products.id !== id))
-  }*/ 
-
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-10">
-      <DialogBackdrop className="fixed inset-0 bg-gray-500 bg-opacity-7   5 transition-opacity" />
+      <DialogBackdrop className="fixed inset-0 bg-lime-50 bg-opacity-7   5 transition-opacity" />
       <div className="fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
             <DialogPanel className="pointer-events-auto w-screen max-w-md transform transition ease-in-out sm:duration-700">
-              <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+              <div className="flex h-full flex-col overflow-y-scroll bg-lime-50 shadow-xl">
                 <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                   <div className="flex Productss-start justify-between">
                   <ToastContainer />
-                    <DialogTitle className="text-lg font-medium text-gray-900">Shopping cart</DialogTitle>
+                    <DialogTitle className="text-lg font-medium text-black">Shopping cart</DialogTitle>
                     <button
                       type="button"
                       onClick={() => setOpen(false)}
@@ -128,13 +97,7 @@ export default function Cart() {
                                         ? handleRemoveFromCart(item)
                                         : removeFromCart(item)
                                     }
-                                    /*const cartItem = cartItems.find((product) => product.id === item.id);
-                                    if (cartItem.quantity === 1) {
-                                      handleRemoveFromCart(item);
-                                    } else {
-                                      removeFromCart(item);
-                                    }
-                                  }}*/
+                                   
                                 >
                                   -
                                 </button>
@@ -167,12 +130,12 @@ export default function Cart() {
                   <div className="mt-6">
                     <a
                       href="/store"
-                      className="flex Productss-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                      className="flex Productss-center justify-center rounded-md border border-transparent bg-lime-50 px-6 py-3 text-base font-medium text-balack shadow-sm hover:bg-lime-100"
                     >
                       Checkout
                     </a>
                   </div>
-                  <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                  {/*<div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
                       or{' '}
                       <button
@@ -183,7 +146,7 @@ export default function Cart() {
                         Continue Shopping<span aria-hidden="true"> →</span>
                       </button>
                     </p>
-                  </div>
+                  </div>*/}
                 </div>
               </div>
             </DialogPanel>

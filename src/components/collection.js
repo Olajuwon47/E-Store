@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 export default function Collection() {
     return (
-      <div className="relative overflow-hidden bg-white">
+      <div className="relative overflow-hidden bg-lime-50">
         <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
             <div className="sm:max-w-lg">
-              <h1 className="text-4xl font-bold tracking-tight text-emerald-300 sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-black sm:text-6xl">
                 Summer styles are finally here
               </h1>
-              <p className="mt-4 text-xl text-lime-300">
+              <p className="mt-4 text-xl text-black">
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                 if you live or die.
               </p>
@@ -84,7 +84,7 @@ export default function Collection() {
   
                 <Link 
                   to="/store"
-                  className="inline-block rounded-md border border-transparent bg-green-800 px-8 py-3 text-center font-medium text-white hover:bg-emerald-600"
+                  className="inline-block rounded-md border border-transparent bg-lime-50 px-8 py-3 text-center font-medium text-black hover:bg-lime-100"
                 >
                   Shop Collection
                 </Link>
