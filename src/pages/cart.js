@@ -22,7 +22,7 @@ export default function Cart() {
       color: '#fff'
     }
   })
-
+  //const [selectedProduct] = useState(null);
   const handleRemoveFromCart = (item) => {
     removeFromCart(item)
     notifyRemovedFromCart(item)

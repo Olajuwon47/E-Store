@@ -1,73 +1,44 @@
-'use client'
-import { useState, useEffect } from 'react'
-import { Dialog, RadioGroup } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { StarIcon } from '@heroicons/react/20/solid'
-//import Cart from './cart.js'
+'use client';
+import { useState, useEffect } from 'react';
+import { Dialog, RadioGroup } from '@headlessui/react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/20/solid';
 import { useCart } from './Cart/cartcontext.js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//import RootLayout from './layout/RootLayout.js';
 
 export default function Store() {
-  const [open, setOpen] = useState(false)
-  const [products, setProducts] = useState([])
-  const [selectedColor, setSelectedColor] = useState(null)
-  const [selectedSize, setSelectedSize] = useState(null)
+  const [open, setOpen] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [visibleProducts, setVisibleProducts] = useState(9);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  //const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
-  
-  /*useEffect(() => {
-    //const Products = localStorage.getItem("Products");
-    async function fetchProducts() {
-      // Check if data is cached in Local Storage
-      const cachedData = localStorage.getItem('/data/products.json');
-      if (cachedData) {
-          console.log('Products');
-          return JSON.parse(cachedData);
-      }
-        // Fetch data from the API if not cached
-    const response = await fetch('http://localhost:3000/data/products.json');
-    const data = await response.json();
-       // Set products and default selected product
-       setProducts(data);
-       setSelectedProduct(data[0]);
-       setSelectedColor(data[0]?.colors?.[0] || null);
-       setSelectedSize(data[0]?.sizes?.[0] || null);
-     } try {
-      
-     } catch (error) {
-       console.error('Failed to fetch products:', error);
-     } finally {
-       //setLoading(false);
-     }
-   fetchProducts();
- }, []);*/
+  const [loading, setLoading] =useState(false)
 
- useEffect(() => {
+  useEffect(() => {
     async function fetchProducts() {
       try {
-        // Check if data is cached in Local Storage
+        setLoading(true)
         const cachedData = localStorage.getItem('/data/products.json');
         if (cachedData) {
-          console.log('Using cached products data');
           const data = JSON.parse(cachedData);
           setProducts(data);
-          setSelectedProduct(data[0]);
+          setSelectedProduct(data[0]
+
+          );
           setSelectedColor(data[0]?.colors?.[0] || null);
           setSelectedSize(data[0]?.sizes?.[0] || null);
-          return; // Exit early if cached data is used
+          setLoading(false)
+          return;
         }
-
-        // Fetch data from the API if not cached
+          setLoading(true)
         const response = await fetch('http://localhost:3000/data/products.json');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-
-        // Cache the fetched data and update state
         localStorage.setItem('/data/products.json', JSON.stringify(data));
         setProducts(data);
         setSelectedProduct(data[0]);
@@ -75,192 +46,205 @@ export default function Store() {
         setSelectedSize(data[0]?.sizes?.[0] || null);
       } catch (error) {
         console.error('Failed to fetch products:', error);
+        setLoading(false)
       }
     }
 
     fetchProducts();
   }, []);
 
+  const notifyAddedToCart = (item) =>
+    toast.success(`${item} added to cart!`, {
+      position: 'top-center',
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#fff',
+        color: '#000',
+      },
+    });
 
-    // Render loading state
-  /*if (loading) {
-    return <h4 className='items-center justify-center' >Loading products...</h4>;
-  }*/
-  // Render fallback if no products are available
-  if (!products || products.length === 0) {
+  const loadMoreProducts = () => {
+    setVisibleProducts((prev) => prev + 9);
+  };
+
+  if (loading  ) {
+    return <div>Loading......</div>;
+  }
+  if (loading || !products || products.length === 0) {
     return <div>No products available.</div>;
   }
   function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-const notifyAddedToCart = (item) => toast.success(`${item} added to cart!`, {
-  position: "top-center",
-  autoClose: 2000,
-  hideProgressBar: true,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  theme: 'colored',
-  style: {
-    backgroundColor: '#fff',
-    color: '#000',
+    return classes.filter(Boolean).join(' ');
   }
-  });
 
   return (
     <>
-    <ToastContainer/>
-       {/* Product List */}
-       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3 bg-lime-100">
-        {products.map((product) => (
-          <div
+      <ToastContainer />
+
+      {/* Product List */}
+      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3 bg-lime-100">
+        {products.slice(0, visibleProducts).map((product) => (
+          <article
             key={product.id}
             className="border p-4 rounded-lg hover:shadow-md"
             onClick={() => {
               setSelectedProduct(product);
               setSelectedColor(product.colors?.[0] || null);
               setSelectedSize(product.sizes?.[0] || null);
-               setOpen(true);
+              setOpen(true);
             }}
           >
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-48 object-cover rounded-md"
+              width={100}
+              height={100}
+              className="rounded-md object-cover"
             />
-            <h3 className="mt-4 text-lg font-bold text-black">{product.name}</h3>
+            <h3 className="mt-4 text-lg font-bold">{product.name}</h3>
             <p className="text-gray-700">${(product.priceCents / 100).toFixed(2)}</p>
-          </div>
+          </article>
         ))}
       </div>
 
-       {/* Product Detail Dialog */}
-       {selectedProduct && (
-    <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
-      {/* Overlay */}
-      <div className="fixed inset-0 bg-lime-50 bg-opacity-75 transition-opacity" />
+      {/* Load More Button */}
+      {visibleProducts < products.length && (
+        <button
+          onClick={loadMoreProducts}
+          className="mt-4 px-4 py-2 bg-lime-200 rounded-lg hover:bg-lime-300"
+        >
+          Load More
+        </button>
+      )}
 
-      <div className="fixed inset-0 z-10 overflow-y-auto">
-        <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-          <Dialog.Panel className="relative w-full max-w-4xl transform overflow-hidden rounded-lg bg-gray-500 text-left shadow-xl transition-all sm:my-8">
-            {/* Close button */}
-            <button
-              type="button"
-              className="absolute right-4 top-4 text-gray-400 hover:text-black"
-              onClick={() => setOpen(false)}
-            >
-              <span className="sr-only">Close</span>
-              <XMarkIcon className="h-6 w-6" />
-            </button>
-
-            <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-12">
-              {/* Product Image */}
-              <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                className="col-span-4 w-full rounded-lg object-cover"
-              />
-
-              {/* Product Details */}
-              <div className="col-span-8">
-                <h2 className="text-2xl font-bold text-gray-900">{selectedProduct.name}</h2>
-                <p className="mt-2 text-xl text-gray-900"> ${selectedProduct.priceCents ? (selectedProduct.priceCents / 100).toFixed(2) : 'N/A'}</p>
-
-                {/* Reviews */}
-                <div className="mt-4 flex items-center">
-                  <div className="flex">
-                    {[0, 1, 2, 3, 4].map((index) => (
-                      <StarIcon
-                        key={index}
-                        className={classNames(
-                          selectedProduct?.rating?.stars > index ? 'text-black' : 'text-gray-200',
-                          'h-5 w-5'                         
-                        )}
-                      />
-                    ))}
-                  </div>
-                  <p className="ml-2 text-sm text-black">
-                  {selectedProduct?.rating?.count || 0}reviews</p>
-                </div>
-
-                {/* Colors */}
-                <div className="mt-6">
-                  <h3 className="text-sm font-medium text-black">Color</h3>
-                  <RadioGroup
-                    value={selectedColor}
-                    onChange={setSelectedColor}
-                    className="mt-2 flex space-x-4"
-                  >
-                     {selectedProduct?.colors?.map((color) => (
-                      <RadioGroup.Option
-                        key={color.name}
-                        value={color}
-                        className={({ checked }) =>
-                          classNames(
-                            checked ? color.selectedClass : '',
-                            'relative cursor-pointer rounded-full p-2 focus:outline-none'
-                          )
-                        }
-                      >
-                        <span
-                          className={classNames(
-                            color.class,
-                            'block h-8 w-8 rounded-full border border-black/10'
-                          )}
-                        />
-                      </RadioGroup.Option>
-                    ))}
-                  </RadioGroup>
-                </div>
-
-                {/* Sizes */}
-                <div className="mt-6">
-                  <h3 className="text-sm font-medium text-black">Size</h3>
-                  <RadioGroup
-                    value={selectedSize}
-                    onChange={setSelectedSize}
-                    className="mt-2 grid grid-cols-4 gap-4"
-                  >
-                    {selectedProduct?.sizes?.map((size) => (
-                      <RadioGroup.Option
-                        key={size.name}
-                        value={size}
-                        disabled={!size.inStock}
-                        className={({ checked }) =>
-                          classNames(
-                            checked ? 'ring-indigo-500' : '',
-                            size.inStock
-                              ? 'bg-white text-gray-900'
-                              : 'bg-gray-50 text-gray-200',
-                            'group relative flex cursor-pointer items-center justify-center rounded-md border px-4 py-2 text-sm font-medium uppercase'
-                          )
-                        }
-                      >
-                        <span>{size.name}</span>
-                      </RadioGroup.Option>
-                    ))}
-                  </RadioGroup>
-                </div>
-
-                {/* Add to bag button */}
+      {/* Product Detail Dialog */}
+      {selectedProduct && (
+        <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
+          <div className="fixed inset-0 bg-lime-50 bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+              <Dialog.Panel className="relative w-full max-w-4xl transform overflow-hidden rounded-lg bg-gray-500 text-left shadow-xl transition-all sm:my-8">
                 <button
                   type="button"
-                  onClick={()=>{ addToCart(products)
-                    notifyAddedToCart(selectedProduct.name)}
-                  }
-                  className="mt-6 w-full rounded-md bg-lime-50 px-4 py-2 text-black hover:bg-lime-100"
+                  className="absolute right-4 top-4 text-gray-400 hover:text-black"
+                  onClick={() => setOpen(false)}
                 >
-                  Add to Cart
+                  <XMarkIcon className="h-6 w-6" />
                 </button>
-              </div>
+
+                <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-12">
+                  <img
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
+                    width={500}
+                    height={500}
+                    className="col-span-4 rounded-lg object-cover"
+                  />
+
+                  <div className="col-span-8">
+                    <h2 className="text-2xl font-bold">{selectedProduct.name}</h2>
+                    <p className="mt-2 text-xl">
+                      ${selectedProduct.priceCents ? (selectedProduct.priceCents / 100).toFixed(2) : 'N/A'}
+                    </p>
+
+                    <div className="mt-4 flex items-center">
+                      <div className="flex">
+                        {[0, 1, 2, 3, 4].map((index) => (
+                          <StarIcon
+                            key={index}
+                            className={classNames(
+                              selectedProduct?.rating?.stars > index ? 'text-black' : 'text-gray-200',
+                              'h-5 w-5'
+                            )}
+                          />
+                        ))}
+                      </div>
+                      <p className="ml-2 text-sm">{selectedProduct?.rating?.count || 0} reviews</p>
+                    </div>
+
+                    {selectedProduct?.colors?.length > 0 && (
+                      <div className="mt-6">
+                        <h3 className="text-sm font-medium">Color</h3>
+                        <RadioGroup
+                          value={selectedColor}
+                          onChange={setSelectedColor}
+                          className="mt-2 flex space-x-4"
+                        >
+                          {selectedProduct.colors.map((color) => (
+                            <RadioGroup.Option
+                              key={color.name}
+                              value={color}
+                              className={({ checked }) =>
+                                classNames(
+                                  checked ? color.selectedClass : '',
+                                  'relative cursor-pointer rounded-full p-2 focus:outline-none'
+                                )
+                              }
+                            >
+                              <span
+                                className={classNames(
+                                  color.class,
+                                  'block h-8 w-8 rounded-full border border-black/10'
+                                )}
+                              />
+                            </RadioGroup.Option>
+                          ))}
+                        </RadioGroup>
+                      </div>
+                    )}
+
+                    {selectedProduct?.sizes?.length > 0 && (
+                      <div className="mt-6">
+                        <h3 className="text-sm font-medium">Size</h3>
+                        <RadioGroup
+                          value={selectedSize}
+                          onChange={setSelectedSize}
+                          className="mt-2 grid grid-cols-4 gap-4"
+                        >
+                          {selectedProduct.sizes.map((size) => (
+                            <RadioGroup.Option
+                              key={size.name}
+                              value={size}
+                              disabled={!size.inStock}
+                              className={({ checked }) =>
+                                classNames(
+                                  checked ? 'ring-indigo-500' : '',
+                                  size.inStock
+                                    ? 'bg-white text-gray-900'
+                                    : 'bg-gray-50 text-gray-200',
+                                  'group relative flex cursor-pointer items-center justify-center rounded-md border px-4 py-2 text-sm font-medium uppercase'
+                                )
+                              }
+                            >
+                              <span>{size.name}</span>
+                            </RadioGroup.Option>
+                          ))}
+                        </RadioGroup>
+                      </div>
+                    )}
+
+                    <button
+                      type="button"
+                    onClick={() => {
+                        addToCart(selectedProduct);
+                        notifyAddedToCart(selectedProduct.name);
+                      }}
+                      className="mt-6 w-full rounded-md bg-lime-50 px-4 py-2 text-black hover:bg-lime-100"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </Dialog.Panel>
             </div>
-          </Dialog.Panel>
-        </div>
-      </div>
-    </Dialog>
-     )} 
-  </> 
-  
-  )
+          </div>
+        </Dialog>
+      )}
+    </>
+  );
 }
