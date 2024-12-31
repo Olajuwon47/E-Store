@@ -76,7 +76,7 @@ export default function Store() {
     return <div>Loading......</div>;
   }
   if (loading || !products || products.length === 0) {
-    return <div>No products available.</div>;
+    return <div>Loading......</div>;
   }
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
