@@ -83,7 +83,8 @@ export default function Collection() {
   
                 <Link 
                   to="/store"
-                  className="inline-block rounded-md border border-transparent bg-lime-50 px-8 py-3 text-center font-medium text-black hover:bg-lime-100"
+                  className="inline-block rounded-md border border-transparent bg-lime-50 px-8 py-3 text-center 
+                  font-medium text-black hover:bg-lime-100"
                 >
                   Shop Collection
                 </Link>
