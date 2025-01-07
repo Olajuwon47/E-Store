@@ -23,9 +23,7 @@ export default function Store() {
         setLoading(true)
         const cachedData = localStorage.getItem('/data/products.json');
         if (cachedData) {
-          console.log(cachedData, 'cachedData')
           const data = JSON.parse(cachedData);
-          console.log(data, 'data')
           setProducts(data);
           setLoading(false)
           setSelectedProduct(data[0]);
@@ -50,9 +48,8 @@ export default function Store() {
     }
 
     fetchProducts();
-  }, [products]);
+  }, []);
 
-  console.log(products, 'products')
 
   const notifyAddedToCart = (item) =>
     toast.success(`${item} added to cart!`, {
