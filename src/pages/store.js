@@ -23,27 +23,26 @@ export default function Store() {
         setLoading(true)
         const cachedData = localStorage.getItem('/data/products.json');
         if (cachedData) {
+          console.log(cachedData, 'cachedData')
           const data = JSON.parse(cachedData);
+          console.log(data, 'data')
           setProducts(data);
-          setSelectedProduct(data[0]
-
-          );
+          setLoading(false)
+          setSelectedProduct(data[0]);
           setSelectedColor(data[0]?.colors?.[0] || null);
           setSelectedSize(data[0]?.sizes?.[0] || null);
-          setLoading(false)
           return;
         }
-          setLoading(true)
-        const response = await fetch('http://localhost:3000/data/products.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        localStorage.setItem('/data/products.json', JSON.stringify(data));
-        setProducts(data);
-        setSelectedProduct(data[0]);
-        setSelectedColor(data[0]?.colors?.[0] || null);
-        setSelectedSize(data[0]?.sizes?.[0] || null);
+        // const response = await fetch('http://localhost:3000/data/products.json');
+        // if (!response.ok) {
+        //   throw new Error(`HTTP error! Status: ${response.status}`);
+        // }
+        // const data = await response.json();
+        // localStorage.setItem('/data/products.json', JSON.stringify(data));
+        // setProducts(data);
+        // setSelectedProduct(data[0]);
+        // setSelectedColor(data[0]?.colors?.[0] || null);
+        // setSelectedSize(data[0]?.sizes?.[0] || null);
       } catch (error) {
         console.error('Failed to fetch products:', error);
         setLoading(false)
@@ -51,7 +50,9 @@ export default function Store() {
     }
 
     fetchProducts();
-  }, []);
+  }, [products]);
+
+  console.log(products, 'products')
 
   const notifyAddedToCart = (item) =>
     toast.success(`${item} added to cart!`, {
