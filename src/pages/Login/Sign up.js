@@ -1,20 +1,21 @@
 import React from 'react'
-import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider } from 'firebase/auth';
+import { getAnalytics } from 'firebase/analytics';
 
-// Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyChGC1rMFMhIV6uOwsmQUofahkEAylmctk",
+  authDomain: "login-9717d.firebaseapp.com",
+  projectId: "login-9717d",
+  storageBucket: "login-9717d.firebasestorage.app",
+  messagingSenderId: "666398940658",
+  appId: "1:666398940658:web:fcda652894764812239f6b",
+  measurementId: "G-BZDVL7H985"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const analytics = getAnalytics(app);
 
 export default function Signup() {
   const handleSocialLogin = async (provider) => {
