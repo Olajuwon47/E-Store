@@ -25,12 +25,10 @@ export default function Store() {
         if (cachedData) {
           const data = JSON.parse(cachedData);
           setProducts(data);
-          setSelectedProduct(data[0]
-
-          );
+          setLoading(false)
+          setSelectedProduct(data[0]);
           setSelectedColor(data[0]?.colors?.[0] || null);
           setSelectedSize(data[0]?.sizes?.[0] || null);
-          setLoading(false)
           return;
         }
           setLoading(true)
@@ -52,6 +50,7 @@ export default function Store() {
 
     fetchProducts();
   }, []);
+
 
   const notifyAddedToCart = (item) =>
     toast.success(`${item} added to cart!`, {
