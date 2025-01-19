@@ -17,10 +17,54 @@ export default function Store() {
   const { addToCart } = useCart();
   const [loading, setLoading] =useState(false)
 
+  /*useEffect(() => {
+    async function fetchProducts() {
+      try {
+        setLoading(true);
+
+        // Check for cached data
+        const cachedData = localStorage.getItem('/data/products.json');
+        if (cachedData) {
+          const data = JSON.parse(cachedData);
+          if (Array.isArray(data)) {
+            setProducts(data);
+            setSelectedProduct(data[0]);
+            setSelectedColor(data[0]?.colors?.[0] || null);
+            setSelectedSize(data[0]?.sizes?.[0] || null);
+          } else {
+            console.error("Cached data is not an array.");
+          }
+          setLoading(false);
+          return;
+        }
+
+        // Fetch data from API
+        const response = await fetch('http://localhost:3001/api/products');
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          localStorage.setItem('/data/products.json', JSON.stringify(data));
+          setProducts(data);
+          setSelectedProduct(data[0]);
+          setSelectedColor(data[0]?.colors?.[0] || null);
+          setSelectedSize(data[0]?.sizes?.[0] || null);
+        } else {
+          console.error("Fetched data is not an array.");
+        }
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProducts();
+  }, []);*/
   useEffect(() => {
     async function fetchProducts() {
       try {
-        setLoading(true)
+       /* setLoading(true)
         const cachedData = localStorage.getItem('/data/products.json');
         if (cachedData) {
           const data = JSON.parse(cachedData);
@@ -30,9 +74,14 @@ export default function Store() {
           setSelectedColor(data[0]?.colors?.[0] || null);
           setSelectedSize(data[0]?.sizes?.[0] || null);
           return;
-        }
-          setLoading(true)
-        const response = await fetch('http://localhost:3001/products');
+        }*/
+        setLoading(true); // Start loading
+        const response = await fetch('http://localhost:3001/api/products', {
+          method: 'GET',
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -44,13 +93,12 @@ export default function Store() {
         setSelectedSize(data[0]?.sizes?.[0] || null);
       } catch (error) {
         console.error('Failed to fetch products:', error);
+      } finally {
         setLoading(false)
       }
     }
-
     fetchProducts();
   }, []);
-
 
   const notifyAddedToCart = (item) =>
     toast.success(`${item} added to cart!`, {
@@ -180,7 +228,7 @@ export default function Store() {
                               value={color}
                               className={({ checked }) =>
                                 classNames(
-                                  checked ? color.selectedClass : '',
+                                  checked ? color.selectedclass : '',
                                   'relative cursor-pointer rounded-full p-2 focus:outline-none'
                                 )
                               }

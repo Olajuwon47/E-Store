@@ -138,9 +138,7 @@ export default function Signup() {
                 Twitter
               </button>
             </div>
-          </div>
-
-         
+          </div>       
         </div>
       </div>
     </>
