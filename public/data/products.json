@@ -1,902 +1,3132 @@
-{ "products": [
-	{
-	  "id": 1,
-	  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-	  "price": 109.95,
-	  "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-	  "category": "men's clothing",
-	  "image": "http://localhost:3001/api/products/81fPKd-2AYL._AC_SL1500_.jpg",
-	  "rating": {
-		"rate": 3.9,
-		"count": 120
-	  }
-	},
-	{
-	  "id": 2,
-	  "name": "Mens Casual Premium Slim Fit T-Shirts ",
-	  "price": 22.3,
-	  "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-	  "category": "men's clothing",
-	  "image": "http://localhost:3001/api/products/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-	  "rating": {
-		"rate": 4.1,
-		"count": 259
-	  }
-	},
-	{
-	  "id": 3,
-	  "name": "Mens Cotton Jacket",
-	  "price": 55.99,
-	  "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-	  "category": "men's clothing",
-	  "image": "http://localhost:3001/api/products/71li-ujtlUL._AC_UX679_.jpg",
-	  "rating": {
-		"rate": 4.7,
-		"count": 500
-	  }
-	},
-	{
-	  "id": 4,
-	  "name": "Mens Casual Slim Fit",
-	  "price": 15.99,
-	  "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-	  "category": "men's clothing",
-	  "image": "http://localhost:3001/api/products/71YXzeOuslL._AC_UY879_.jpg",
-	  "rating": {
-		"rate": 2.1,
-		"count": 430
-	  }
-	},
-	{
-	  "id": 5,
-	  "name": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-	  "price": 695,
-	  "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-	  "category": "jewelery",
-	  "image": "http://localhost:3001/api/products/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-	  "rating": {
-		"rate": 4.6,
-		"count": 400
-	  }
-	},
-	{
-	  "id": 6,
-	  "name": "Solid Gold Petite Micropave ",
-	  "price": 168,
-	  "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-	  "category": "jewelery",
-	  "image": "http://localhost:3001/api/products/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-	  "rating": {
-		"rate": 3.9,
-		"count": 70
-	  }
-	},
-	{
-	  "id": 7,
-	  "name": "White Gold Plated Princess",
-	  "price": 9.99,
-	  "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-	  "category": "jewelery",
-	  "image": "http://localhost:3001/api/products/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-	  "rating": {
-		"rate": 3,
-		"count": 400
-	  }
-	},
-	{
-	  "id": 8,
-	  "name": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-	  "price": 10.99,
-	  "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-	  "category": "jewelery",
-	  "image": "http://localhost:3001/api/products/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-	  "rating": {
-		"rate": 1.9,
-		"count": 100
-	  }
-	},
-	{
-	  "id": 9,
-	  "name": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-	  "price": 64,
-	  "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-	  "category": "electronics",
-	  "image": "http://localhost:3001/api/products/61IBBVJvSDL._AC_SY879_.jpg",
-	  "rating": {
-		"rate": 3.3,
-		"count": 203
-	  }
-	},
-	{
-	  "id": 10,
-	  "name": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-	  "price": 109,
-	  "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-	  "category": "electronics",
-	  "image": "http://localhost:3001/api/products/61U7T1koQqL._AC_SX679_.jpg",
-	  "rating": {
-		"rate": 2.9,
-		"count": 470
-	  }
-	},
-	{
-	  "id": 11,
-	  "name": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-	  "price": 109,
-	  "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-	  "category": "electronics",
-	  "image": "http://localhost:3001/api/products/71kWymZ+c+L._AC_SX679_.jpg",
-	  "rating": {
-		"rate": 4.8,
-		"count": 319
-	  }
-	},
-	{
-	  "id": 12,
-	  "name": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-	  "price": 114,
-	  "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-	  "category": "electronics",
-	  "image": "http://localhost:3001/api/products/61mtL65D4cL._AC_SX679_.jpg",
-	  "rating": {
-		"rate": 4.8,
-		"count": 400
-	  }
-	},
-	{
-	  "id": 13,
-	  "name": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-	  "price": 599,
-	  "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-	  "category": "electronics",
-	  "image": "http://localhost:3001/api/products/81QpkIctqPL._AC_SX679_.jpg",
-	  "rating": {
-		"rate": 2.9,
-		"count": 250
-	  }
-	},
-	{
-	  "id": 14,
-	  "name": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
-	  "price": 999.99,
-	  "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
-	  "category": "electronics",
-	  "image": "http://localhost:3001/api/products/81Zt42ioCgL._AC_SX679_.jpg",
-	  "rating": {
-		"rate": 2.2,
-		"count": 140
-	  }
-	},
-	{
-	  "id": 15,
-	  "name": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-	  "price": 56.99,
-	  "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-	  "category": "women's clothing",
-	  "image": "http://localhost:3001/api/products/51Y5NI-I5jL._AC_UX679_.jpg",
-	  "rating": {
-		"rate": 2.6,
-		"count": 235
-	  }
-	},
-	{
-	  "id": 16,
-	  "name": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-	  "price": 29.95,
-	  "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-	  "category": "women's clothing",
-	  "image": "http://localhost:3001/api/products/81XH0e8fefL._AC_UY879_.jpg",
-	  "rating": {
-		"rate": 2.9,
-		"count": 340
-	  }
-	},
-	{
-	  "id": 17,
-	  "name": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
-	  "price": 39.99,
-	  "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
-	  "category": "women's clothing",
-	  "image": "http://localhost:3001/api/products/71HblAHs5xL._AC_UY879_-2.jpg",
-	  "rating": {
-		"rate": 3.8,
-		"count": 679
-	  }
-	},
-	{
-	  "id": 18,
-	  "name": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-	  "price": 9.85,
-	  "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
-	  "category": "women's clothing",
-	  "image": "http://localhost:3001/api/products/71z3kpMAYsL._AC_UY879_.jpg",
-	  "rating": {
-		"rate": 4.7,
-		"count": 130
-	  }
-	},
-	{
-	  "id": 19,
-	  "name": "Opna Women's Short Sleeve Moisture",
-	  "price": 7.95,
-	  "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
-	  "category": "women's clothing",
-	  "image": "http://localhost:3001/api/products/51eg55uWmdL._AC_UX679_.jpg",
-	  "rating": {
-		"rate": 4.5,
-		"count": 146
-	  }
-	},
-	{
-	  "id": 20,
-	  "name": "DANVOUY Womens T Shirt Casual Cotton Short",
-	  "price": 12.99,
-	  "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-	  "category": "women's clothing",
-	  "image": "http://localhost:3001/api/products/61pHAEJ4NML._AC_UX679_.jpg",
-	  "rating": {
-		"rate": 3.6,
-		"count": 145
-	  }
-	},
-	{
-	  "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-	  "image": "http://localhost:3001/api/products/athletic-cotton-socks-6-pairs.jpg",
-	  "name": "Black and Gray Athletic Cotton Socks - 6 Pairs",
-	  "rating": {
-		"stars": 4.5,
-		"count": 87
-	  },
-	  "price": 1090,
-	  "keywords": [
-		"socks",
-		"sports",
-		"apparel"
-	  ]
-	},
-	{
-	  "id": "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-	  "image": "http://localhost:3001/api/products/intermediate-composite-basketball.jpg",
-	  "name": "Intermediate Size Basketball",
-	  "rating": {
-		"stars": 4,
-		"count": 127
-	  },
-	  "priceCents": 2095,
-	  "keywords": [
-		"sports",
-		"basketballs"
-	  ]
-	},
-	{
-	  "id": "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-	  "image": "http://localhost:3001/api/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-	  "name": "Adults Plain Cotton T-Shirt",
-	  "rating": {
-		"stars": 4.5,
-		"count": 56
-	  },
-	  "priceCents": 799,
-	  "keywords": [
-		"tshirts",
-		"apparel",
-		"mens"
-	  ],
-	  "type": "clothing",
-	  "sizeChartLink": "images/clothing-size-chart.png"
-	},
-	{
-	  "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
-	  "image": "http://localhost:3001/api/products/black-2-slot-toaster.jpg",
-	  "name": "2 Slot Toaster - Black",
-	  "rating": {
-		"stars": 5,
-		"count": 2197
-	  },
-	  "priceCents": 1899,
-	  "keywords": [
-		"toaster",
-		"kitchen",
-		"appliances"
-	  ]
-	},
-	{
-	  "id": "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-	  "image": "http://localhost:3001/api/products/6-piece-white-dinner-plate-set.jpg",
-	  "name": "6 Piece White Dinner Plate Set",
-	  "rating": {
-		"stars": 4,
-		"count": 37
-	  },
-	  "priceCents": 2067,
-	  "keywords": [
-		"plates",
-		"kitchen",
-		"dining"
-	  ]
-	},
-	{
-	  "id": "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-	  "image": "http://localhost:3001/api/products/6-piece-non-stick-baking-set.webp",
-	  "name": "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
-	  "rating": {
-		"stars": 4.5,
-		"count": 175
-	  },
-	  "priceCents": 3499,
-	  "keywords": [
-		"kitchen",
-		"cookware"
-	  ]
-	},
-	{
-	  "id": "dd82ca78-a18b-4e2a-9250-31e67412f98d",
-	  "image": "http://localhost:3001/api/products/plain-hooded-fleece-sweatshirt-yellow.jpg",
-	  "name": "Plain Hooded Fleece Sweatshirt",
-	  "rating": {
-		"stars": 4.5,
-		"count": 317
-	  },
-	  "priceCents": 2400,
-	  "keywords": [
-		"hoodies",
-		"sweaters",
-		"apparel"
-	  ]
-	},
-	{
-	  "id": "77919bbe-0e56-475b-adde-4f24dfed3a04",
-	  "image": "http://localhost:3001/api/products/luxury-tower-set-6-piece.jpg",
-	  "name": "Luxury Towel Set - Graphite Gray",
-	  "rating": {
-		"stars": 4.5,
-		"count": 144
-	  },
-	  "priceCents": 3599,
-	  "keywords": [
-		"bathroom",
-		"washroom",
-		"restroom",
-		"towels",
-		"bath towels"
-	  ]
-	},
-	{
-	  "id": "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
-	  "image": "http://localhost:3001/api/products/liquid-laundry-detergent-plain.jpg",
-	  "name": "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
-	  "rating": {
-		"stars": 4.5,
-		"count": 305
-	  },
-	  "priceCents": 2899,
-	  "keywords": [
-		"bathroom",
-		"cleaning"
-	  ]
-	},
-	{
-	  "id": "58b4fc92-e98c-42aa-8c55-b6b79996769a",
-	  "image": "http://localhost:3001/api/products/knit-athletic-sneakers-gray.jpg",
-	  "name": "Waterproof Knit Athletic Sneakers - Gray",
-	  "rating": {
-		"stars": 4,
-		"count": 89
-	  },
-	  "priceCents": 3390,
-	  "keywords": [
-		"shoes",
-		"running shoes",
-		"footwear"
-	  ]
-	},
-	{
-	  "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
-	  "image": "http://localhost:3001/api/products/women-chiffon-beachwear-coverup-black.jpg",
-	  "name": "Women's Chiffon Beachwear Cover Up - Black",
-	  "rating": {
-		"stars": 4.5,
-		"count": 235
-	  },
-	  "priceCents": 2070,
-	  "keywords": [
-		"robe",
-		"swimsuit",
-		"swimming",
-		"bathing",
-		"apparel"
-	  ],
-	  "type": "clothing",
-	  "sizeChartLink": "images/clothing-size-chart.png"
-	},
-	{
-	  "id": "aad29d11-ea98-41ee-9285-b916638cac4a",
-	  "image": "http://localhost:3001/api/products/round-sunglasses-black.jpg",
-	  "name": "Round Sunglasses",
-	  "rating": {
-		"stars": 4.5,
-		"count": 30
-	  },
-	  "priceCents": 1560,
-	  "keywords": [
-		"accessories",
-		"shades"
-	  ]
-	},
-	{
-	  "id": "04701903-bc79-49c6-bc11-1af7e3651358",
-	  "image": "http://localhost:3001/api/products/women-beach-sandals.jpg",
-	  "name": "Women's Two Strap Buckle Sandals - Tan",
-	  "rating": {
-		"stars": 4.5,
-		"count": 562
-	  },
-	  "priceCents": 2499,
-	  "keywords": [
-		"footwear",
-		"sandals",
-		"womens",
-		"beach",
-		"summer"
-	  ]
-	},
-	{
-	  "id": "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
-	  "image": "http://localhost:3001/api/products/blackout-curtain-set-beige.webp",
-	  "name": "Blackout Curtains Set 4-Pack - Beige",
-	  "rating": {
-		"stars": 4.5,
-		"count": 232
-	  },
-	  "priceCents": 4599,
-	  "keywords": [
-		"bedroom",
-		"curtains",
-		"home"
-	  ]
-	},
-	{
-	  "id": "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
-	  "image": "http://localhost:3001/api/products/men-slim-fit-summer-shorts-gray.jpg",
-	  "name": "Men's Slim-Fit Summer Shorts",
-	  "rating": {
-		"stars": 4,
-		"count": 160
-	  },
-	  "priceCents": 1699,
-	  "keywords": [
-		"shorts",
-		"apparel",
-		"mens"
-	  ]
-	},
-	{
-	  "id": "c2a82c5e-aff4-435f-9975-517cfaba2ece",
-	  "image": "http://localhost:3001/api/products/electric-glass-and-steel-hot-water-kettle.webp",
-	  "name": "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
-	  "rating": {
-		"stars": 5,
-		"count": 846
-	  },
-	  "priceCents": 3074,
-	  "keywords": [
-		"water boiler",
-		"appliances",
-		"kitchen"
-	  ]
-	},
-	{
-	  "id": "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
-	  "image": "http://localhost:3001/api/products/facial-tissue-2-ply-18-boxes.jpg",
-	  "name": "Ultra Soft Tissue 2-Ply - 18 Box",
-	  "rating": {
-		"stars": 4,
-		"count": 99
-	  },
-	  "priceCents": 2374,
-	  "keywords": [
-		"kleenex",
-		"tissues",
-		"kitchen",
-		"tissues box",
-		"napkins"
-	  ]
-	},
-	{
-	  "id": "a82c6bac-3067-4e68-a5ba-d827ac0be010",
-	  "image": "http://localhost:3001/api/products/straw-sunhat.webp",
-	  "name": "Straw Lifeguard Sun Hat",
-	  "rating": {
-		"stars": 4,
-		"count": 215
-	  },
-	  "priceCents": 2200,
-	  "keywords": [
-		"hats",
-		"straw hats",
-		"summer",
-		"apparel"
-	  ]
-	},
-	{
-	  "id": "e4f64a65-1377-42bc-89a5-e572d19252e2",
-	  "image": "http://localhost:3001/api/products/sky-flower-stud-earrings.webp",
-	  "name": "Sterling Silver Sky Flower Stud Earrings",
-	  "rating": {
-		"stars": 4.5,
-		"count": 52
-	  },
-	  "priceCents": 1799,
-	  "keywords": [
-		"jewelry",
-		"accessories",
-		"womens"
-	  ]
-	},
-	{
-	  "id": "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
-	  "image": "http://localhost:3001/api/products/women-stretch-popover-hoodie-black.jpg",
-	  "name": "Women's Stretch Popover Hoodie",
-	  "rating": {
-		"stars": 4.5,
-		"count": 2465
-	  },
-	  "priceCents": 1374,
-	  "keywords": [
-		"hooded",
-		"hoodies",
-		"sweaters",
-		"womens",
-		"apparel"
-	  ],
-	  "type": "clothing",
-	  "sizeChartLink": "images/clothing-size-chart.png"
-	},
-	{
-	  "id": "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
-	  "image": "http://localhost:3001/api/products/bathroom-rug.jpg",
-	  "name": "Bathroom Bath Rug Mat 20 x 31 Inch - Grey",
-	  "rating": {
-		"stars": 4.5,
-		"count": 119
-	  },
-	  "priceCents": 1250,
-	  "keywords": [
-		"bathmat",
-		"bathroom",
-		"home"
-	  ]
-	},
-	{
-	  "id": "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
-	  "image": "http://localhost:3001/api/products/women-knit-ballet-flat-black.jpg",
-	  "name": "Women's Knit Ballet Flat",
-	  "rating": {
-		"stars": 4,
-		"count": 326
-	  },
-	  "priceCents": 2640,
-	  "keywords": [
-		"shoes",
-		"flats",
-		"womens",
-		"footwear"
-	  ]
-	},
-	{
-	  "id": "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
-	  "image": "http://localhost:3001/api/products/men-golf-polo-t-shirt-blue.jpg",
-	  "name": "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
-	  "rating": {
-		"stars": 4.5,
-		"count": 2556
-	  },
-	  "priceCents": 1599,
-	  "keywords": [
-		"tshirts",
-		"shirts",
-		"apparel",
-		"mens"
-	  ],
-	  "type": "clothing",
-	  "sizeChartLink": "images/clothing-size-chart.png"
-	},
-	{
-	  "id": "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
-	  "image": "http://localhost:3001/api/products/trash-can-with-foot-pedal-50-liter.jpg",
-	  "name": "Trash Can with Foot Pedal - Brushed Stainless Steel",
-	  "rating": {
-		"stars": 4.5,
-		"count": 2286
-	  },
-	  "priceCents": 8300,
-	  "keywords": [
-		"garbage",
-		"bins",
-		"cans",
-		"kitchen"
-	  ]
-	},
-	{
-	  "id": "19c6a64a-5463-4d45-9af8-e41140a4100c",
-	  "image": "http://localhost:3001/api/products/duvet-cover-set-blue-twin.jpg",
-	  "name": "Duvet Cover Set with Zipper Closure",
-	  "rating": {
-		"stars": 4,
-		"count": 456
-	  },
-	  "priceCents": 2399,
-	  "keywords": [
-		"bedroom",
-		"bed sheets",
-		"sheets",
-		"covers",
-		"home"
-	  ]
-	},
-	{
-	  "id": "d2785924-743d-49b3-8f03-ec258e640503",
-	  "image": "http://localhost:3001/api/products/women-chunky-beanie-gray.webp",
-	  "name": "Women's Chunky Cable Beanie - Gray",
-	  "rating": {
-		"stars": 5,
-		"count": 83
-	  },
-	  "priceCents": 1250,
-	  "keywords": [
-		"hats",
-		"winter hats",
-		"beanies",
-		"tuques",
-		"apparel",
-		"womens"
-	  ]
-	},
-	{
-	  "id": "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
-	  "image": "http://localhost:3001/api/products/men-chino-pants-beige.jpg",
-	  "name": "Men's Classic-fit Pleated Chino Pants",
-	  "rating": {
-		"stars": 4.5,
-		"count": 9017
-	  },
-	  "priceCents": 2290,
-	  "keywords": [
-		"pants",
-		"apparel",
-		"mens"
-	  ]
-	},
-	{
-	  "id": "1c079479-8586-494f-ab53-219325432536",
-	  "image": "http://localhost:3001/api/products/men-athletic-shoes-green.jpg",
-	  "name": "Men's Athletic Sneaker",
-	  "rating": {
-		"stars": 4,
-		"count": 229
-	  },
-	  "priceCents": 3890,
-	  "keywords": [
-		"shoes",
-		"running shoes",
-		"footwear",
-		"mens"
-	  ]
-	},
-	{
-	  "id": "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
-	  "image": "http://localhost:3001/api/products/men-navigator-sunglasses-brown.jpg",
-	  "name": "Men's Navigator Sunglasses Pilot",
-	  "rating": {
-		"stars": 3.5,
-		"count": 42
-	  },
-	  "priceCents": 1690,
-	  "keywords": [
-		"sunglasses",
-		"glasses",
-		"accessories",
-		"shades"
-	  ]
-	},
-	{
-	  "id": "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
-	  "image": "http://localhost:3001/api/products/non-stick-cooking-set-15-pieces.webp",
-	  "name": "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
-	  "rating": {
-		"stars": 4.5,
-		"count": 511
-	  },
-	  "priceCents": 6797,
-	  "keywords": [
-		"cooking set",
-		"kitchen"
-	  ]
-	},
-	{
-	  "id": "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
-	  "image": "http://localhost:3001/api/products/vanity-mirror-silver.jpg",
-	  "name": "Vanity Mirror with Heavy Base - Chrome",
-	  "rating": {
-		"stars": 4.5,
-		"count": 130
-	  },
-	  "priceCents": 1649,
-	  "keywords": [
-		"bathroom",
-		"washroom",
-		"mirrors",
-		"home"
-	  ]
-	},
-	{
-	  "id": "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
-	  "image": "http://localhost:3001/api/products/women-french-terry-fleece-jogger-camo.jpg",
-	  "name": "Women's Fleece Jogger Sweatpant",
-	  "rating": {
-		"stars": 4.5,
-		"count": 248
-	  },
-	  "priceCents": 2400,
-	  "keywords": [
-		"pants",
-		"sweatpants",
-		"jogging",
-		"apparel",
-		"womens"
-	  ]
-	},
-	{
-	  "id": "d339adf3-e004-4c20-a120-40e8874c66cb",
-	  "image": "http://localhost:3001/api/products/double-elongated-twist-french-wire-earrings.webp",
-	  "name": "Double Oval Twist French Wire Earrings - Gold",
-	  "rating": {
-		"stars": 4.5,
-		"count": 117
-	  },
-	  "priceCents": 2400,
-	  "keywords": [
-		"accessories",
-		"womens"
-	  ]
-	},
-	{
-	  "id": "d37a651a-d501-483b-aae6-a9659b0757a0",
-	  "image": "http://localhost:3001/api/products/round-airtight-food-storage-containers.jpg",
-	  "name": "Round Airtight Food Storage Containers - 5 Piece",
-	  "rating": {
-		"stars": 4,
-		"count": 126
-	  },
-	  "priceCents": 2899,
-	  "keywords": [
-		"boxes",
-		"food containers",
-		"kitchen"
-	  ]
-	},
-	{
-	  "id": "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
-	  "image": "http://localhost:3001/api/products/coffeemaker-with-glass-carafe-black.jpg",
-	  "name": "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
-	  "rating": {
-		"stars": 4.5,
-		"count": 1211
-	  },
-	  "priceCents": 2250,
-	  "keywords": [
-		"coffeemakers",
-		"kitchen",
-		"appliances"
-	  ]
-	},
-	{
-	  "id": "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
-	  "image": "http://localhost:3001/api/products/blackout-curtains-black.jpg",
-	  "name": "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
-	  "rating": {
-		"stars": 4.5,
-		"count": 363
-	  },
-	  "priceCents": 3099,
-	  "keywords": [
-		"bedroom",
-		"home"
-	  ]
-	},
-	{
-	  "id": "8a53b080-6d40-4a65-ab26-b24ecf700bce",
-	  "image": "http://localhost:3001/api/products/cotton-bath-towels-teal.webp",
-	  "name": "100% Cotton Bath Towels - 2 Pack, Light Teal",
-	  "rating": {
-		"stars": 4.5,
-		"count": 93
-	  },
-	  "priceCents": 2110,
-	  "keywords": [
-		"bathroom",
-		"home",
-		"towels"
-	  ]
-	},
-	{
-	  "id": "10ed8504-57db-433c-b0a3-fc71a35c88a1",
-	  "image": "http://localhost:3001/api/products/knit-athletic-sneakers-pink.webp",
-	  "name": "Waterproof Knit Athletic Sneakers - Pink",
-	  "rating": {
-		"stars": 4,
-		"count": 89
-	  },
-	  "priceCents": 3390,
-	  "keywords": [
-		"shoes",
-		"running shoes",
-		"footwear",
-		"womens"
-	  ]
-	},
-	{
-	  "id": "77a845b1-16ed-4eac-bdf9-5b591882113d",
-	  "image": "http://localhost:3001/api/products/countertop-blender-64-oz.jpg",
-	  "name": "Countertop Blender - 64oz, 1400 Watts",
-	  "rating": {
-		"stars": 4,
-		"count": 3
-	  },
-	  "priceCents": 10747,
-	  "keywords": [
-		"food blenders",
-		"kitchen",
-		"appliances"
-	  ]
-	},
-	{
-	  "id": "36c64692-677f-4f58-b5ec-0dc2cf109e27",
-	  "image": "http://localhost:3001/api/products/floral-mixing-bowl-set.jpg",
-	  "name": "10-Piece Mixing Bowl Set with Lids - Floral",
-	  "rating": {
-		"stars": 5,
-		"count": 679
-	  },
-	  "priceCents": 3899,
-	  "keywords": [
-		"mixing bowls",
-		"baking",
-		"cookware",
-		"kitchen"
-	  ]
-	},
-	{
-	  "id": "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
-	  "image": "http://localhost:3001/api/products/kitchen-paper-towels-30-pack.jpg",
-	  "name": "2-Ply Kitchen Paper Towels - 30 Pack",
-	  "rating": {
-		"stars": 4.5,
-		"count": 1045
-	  },
-	  "priceCents": 5799,
-	  "keywords": [
-		"kitchen",
-		"kitchen towels",
-		"tissues"
-	  ]
-	},
-	{
-	  "id": "bc2847e9-5323-403f-b7cf-57fde044a955",
-	  "image": "http://localhost:3001/api/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
-	  "name": "Men's Full-Zip Hooded Fleece Sweatshirt",
-	  "rating": {
-		"stars": 4.5,
-		"count": 3157
-	  },
-	  "priceCents": 2400,
-	  "keywords": [
-		"sweaters",
-		"hoodies",
-		"apparel",
-		"mens"
-	  ]
-	}
-	]
-   } 
-  
+[
+    {
+        "id": 1,
+        "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "priceCents": 1095,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 120
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Mens Casual Premium Slim Fit T-Shirts ",
+        "priceCents": 223,
+        "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+        "rating": {
+            "rate": 4.1,
+            "count": 259
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Mens Cotton Jacket",
+        "priceCents": 5599,
+        "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Mens Casual Slim Fit",
+        "priceCents": 1599,
+        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 2.1,
+            "count": 430
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        "priceCents": 695,
+        "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 4.6,
+            "count": 400
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Solid Gold Petite Micropave ",
+        "priceCents": 168,
+        "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 70
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "White Gold Plated Princess",
+        "priceCents": 999,
+        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 3,
+            "count": 400
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+        "priceCents": 1099,
+        "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 1.9,
+            "count": 100
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+        "priceCents": 647,
+        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user\u2019s hardware configuration and operating system",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+        "rating": {
+            "rate": 3.3,
+            "count": 203
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+        "priceCents": 109,
+        "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5\u201d hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 470
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+        "priceCents": 109,
+        "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+        "rating": {
+            "rate": 4.8,
+            "count": 319
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+        "priceCents": 114,
+        "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 4.8,
+            "count": 400
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+        "priceCents": 599,
+        "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 250
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) \u2013 Super Ultrawide Screen QLED ",
+        "priceCents": 9999,
+        "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.2,
+            "count": 140
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+        "priceCents": 5699,
+        "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+        "rating": {
+            "rate": 2.6,
+            "count": 235
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+        "priceCents": 2995,
+        "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 340
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+        "priceCents": 3999,
+        "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+        "rating": {
+            "rate": 3.8,
+            "count": 679
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+        "priceCents": 985,
+        "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 130
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Opna Women's Short Sleeve Moisture",
+        "priceCents": 795,
+        "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+        "category": "women's clothing",            
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 146
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "DANVOUY Womens T Shirt Casual Cotton Short",
+        "priceCents": 1299,
+        "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+        "rating": {
+            "rate": 3.6,
+            "count": 145
+        },
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+        "image": "/images/products/athletic-cotton-socks-6-pairs.jpg",
+        "name": "Black and Gray Athletic Cotton Socks - 6 Pairs",
+        "rating": {
+            "stars": 4.5,
+            "count": 87
+        },
+        "priceCents": 1090,
+        "keywords": [
+            "socks",
+            "sports",
+            "apparel"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+        "image": "/images/products/intermediate-composite-basketball.jpg",
+        "name": "Intermediate Size Basketball",
+        "rating": {
+            "stars": 4,
+            "count": 127
+        },
+        "priceCents": 2095,
+        "keywords": [
+            "sports",
+            "basketballs"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+        "image": "/images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+        "name": "Adults Plain Cotton T-Shirt",
+        "rating": {
+            "stars": 4.5,
+            "count": 56
+        },
+        "priceCents": 799,
+        "keywords": [
+            "tshirts",
+            "apparel",
+            "mens"
+        ],
+        "type": "clothing",
+        "sizeChartLink": "images/clothing-size-chart.png",
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
+        "image": "/images//products/black-2-slot-toaster.jpg",
+        "name": "2 Slot Toaster - Black",
+        "rating": {
+            "stars": 5,
+            "count": 2197
+        },
+        "priceCents": 1899,
+        "keywords": [
+            "toaster",
+            "kitchen",
+            "appliances"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "3ebe75dc-64d2-4137-8860-1f5a963e534b", 
+        "image": "/images//products/6-piece-white-dinner-plate-set.jpg",
+        "name": "6 Piece White Dinner Plate Set",
+        "rating": {
+            "stars": 4,
+            "count": 37
+        },
+        "priceCents": 2067,
+        "keywords": [
+            "plates",
+            "kitchen",
+            "dining"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",      
+        "image": "/images//products/6-piece-non-stick-baking-set.webp",
+        "name": "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
+        "rating": {
+            "stars": 4.5,
+            "count": 175
+        },
+        "priceCents": 3499,
+        "keywords": [
+            "kitchen",
+            "cookware"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "dd82ca78-a18b-4e2a-9250-31e67412f98d",
+        "image": "/images//products/plain-hooded-fleece-sweatshirt-yellow.jpg",
+        "name": "Plain Hooded Fleece Sweatshirt",
+        "rating": {
+            "stars": 4.5,
+            "count": 317
+        },
+        "priceCents": 2400,
+        "keywords": [
+            "hoodies",
+            "sweaters",
+            "apparel"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "77919bbe-0e56-475b-adde-4f24dfed3a04",
+        "image": "/images//products/luxury-tower-set-6-piece.jpg",
+        "name": "Luxury Towel Set - Graphite Gray",
+        "rating": {
+            "stars": 4.5,
+            "count": 144
+        },
+        "priceCents": 3599,
+        "keywords": [
+            "bathroom",
+            "washroom",
+            "restroom",
+            "towels",
+            "bath towels"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
+        "image": "/images//products/liquid-laundry-detergent-plain.jpg",
+        "name": "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
+        "rating": {
+            "stars": 4.5,
+            "count": 305
+        },
+        "priceCents": 2899,
+        "keywords": [
+            "bathroom",
+            "cleaning"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "58b4fc92-e98c-42aa-8c55-b6b79996769a",
+        "image": "/images//products/knit-athletic-sneakers-gray.jpg",
+        "name": "Waterproof Knit Athletic Sneakers - Gray",
+        "rating": {
+            "stars": 4,
+            "count": 89
+        },
+        "priceCents": 3390,
+        "keywords": [
+            "shoes",
+            "running shoes",
+            "footwear"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
+        "image": "/images//products/women-chiffon-beachwear-coverup-black.jpg",
+        "name": "Women's Chiffon Beachwear Cover Up - Black",
+        "rating": {
+            "stars": 4.5,
+            "count": 235
+        },
+        "priceCents": 2070,
+        "keywords": [
+            "robe",
+            "swimsuit",
+            "swimming",
+            "bathing",
+            "apparel"
+        ],
+        "type": "clothing",
+        "sizeChartLink": "images/clothing-size-chart.png",
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "aad29d11-ea98-41ee-9285-b916638cac4a",
+        "image": "/images//products/round-sunglasses-black.jpg",
+        "name": "Round Sunglasses",
+        "rating": {
+            "stars": 4.5,
+            "count": 30
+        },
+        "priceCents": 1560,
+        "keywords": [
+            "accessories",
+            "shades"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "04701903-bc79-49c6-bc11-1af7e3651358",
+        "image": "/images//products/women-beach-sandals.jpg",
+        "name": "Women's Two Strap Buckle Sandals - Tan",
+        "rating": {
+            "stars": 4.5,
+            "count": 562
+        },
+        "priceCents": 2499,
+        "keywords": [
+            "footwear",
+            "sandals",
+            "womens",
+            "beach",
+            "summer"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
+        "image": "/images//products/blackout-curtain-set-beige.webp",
+        "name": "Blackout Curtains Set 4-Pack - Beige",
+        "rating": {
+            "stars": 4.5,
+            "count": 232
+        },
+        "priceCents": 4599,
+        "keywords": [
+            "bedroom",
+            "curtains",
+            "home"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
+        "image": "/images//products/men-slim-fit-summer-shorts-gray.jpg",
+        "name": "Men's Slim-Fit Summer Shorts",
+        "rating": {
+            "stars": 4,
+            "count": 160
+        },
+        "priceCents": 1699,
+        "keywords": [
+            "shorts",
+            "apparel",
+            "mens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "c2a82c5e-aff4-435f-9975-517cfaba2ece",
+        "image": "/images//products/electric-glass-and-steel-hot-water-kettle.webp",
+        "name": "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
+        "rating": {
+            "stars": 5,
+            "count": 846
+        },
+        "priceCents": 3074,
+        "keywords": [
+            "water boiler",
+            "appliances",
+            "kitchen"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
+        "image": "/images//products/facial-tissue-2-ply-18-boxes.jpg",
+        "name": "Ultra Soft Tissue 2-Ply - 18 Box",
+        "rating": {
+            "stars": 4,
+            "count": 99
+        },
+        "priceCents": 2374,
+        "keywords": [
+            "kleenex",
+            "tissues",
+            "kitchen",
+            "tissues box",
+            "napkins"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "a82c6bac-3067-4e68-a5ba-d827ac0be010",
+        "image": "/images//products/straw-sunhat.webp",
+        "name": "Straw Lifeguard Sun Hat",
+        "rating": {
+            "stars": 4,
+            "count": 215
+        },
+        "priceCents": 2200,
+        "keywords": [
+            "hats",
+            "straw hats",
+            "summer",
+            "apparel"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "e4f64a65-1377-42bc-89a5-e572d19252e2",
+        "image": "/images//products/sky-flower-stud-earrings.webp",
+        "name": "Sterling Silver Sky Flower Stud Earrings",
+        "rating": {
+            "stars": 4.5,
+            "count": 52
+        },
+        "priceCents": 1799,
+        "keywords": [
+            "jewelry",
+            "accessories",
+            "womens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
+        "image": "/images//products/women-stretch-popover-hoodie-black.jpg",
+        "name": "Women's Stretch Popover Hoodie",
+        "rating": {
+            "stars": 4.5,
+            "count": 2465
+        },
+        "priceCents": 1374,
+        "keywords": [
+            "hooded",
+            "hoodies",
+            "sweaters",
+            "womens",
+            "apparel"
+        ],
+        "type": "clothing",
+        "sizeChartLink": "images/clothing-size-chart.png",
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
+        "image": "/images//products/bathroom-rug.jpg",
+        "name": "Bathroom Bath Rug Mat 20 x 31 Inch - Grey",
+        "rating": {
+            "stars": 4.5,
+            "count": 119
+        },
+        "priceCents": 1250,
+        "keywords": [
+            "bathmat",
+            "bathroom",
+            "home"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
+        "image": "/images//products/women-knit-ballet-flat-black.jpg",
+        "name": "Women's Knit Ballet Flat",
+        "rating": {
+            "stars": 4,
+            "count": 326
+        },
+        "priceCents": 2640,
+        "keywords": [
+            "shoes",
+            "flats",
+            "womens",
+            "footwear"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
+        "image": "/images//products/men-golf-polo-t-shirt-blue.jpg",
+        "name": "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
+        "rating": {
+            "stars": 4.5,
+            "count": 2556
+        },
+        "priceCents": 1599,
+        "keywords": [
+            "tshirts",
+            "shirts",
+            "apparel",
+            "mens"
+        ],
+        "type": "clothing",
+        "sizeChartLink": "images/clothing-size-chart.png",
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
+        "image": "/images//products/trash-can-with-foot-pedal-50-liter.jpg",
+        "name": "Trash Can with Foot Pedal - Brushed Stainless Steel",
+        "rating": {
+            "stars": 4.5,
+            "count": 2286
+        },
+        "priceCents": 8300,
+        "keywords": [
+            "garbage",
+            "bins",
+            "cans",
+            "kitchen"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "19c6a64a-5463-4d45-9af8-e41140a4100c",
+        "image": "/images//products/duvet-cover-set-blue-twin.jpg",
+        "name": "Duvet Cover Set with Zipper Closure",
+        "rating": {
+            "stars": 4,
+            "count": 456
+        },
+        "priceCents": 2399,
+        "keywords": [
+            "bedroom",
+            "bed sheets",
+            "sheets",
+            "covers",
+            "home"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "d2785924-743d-49b3-8f03-ec258e640503",
+        "image": "/images//products/women-chunky-beanie-gray.webp",
+        "name": "Women's Chunky Cable Beanie - Gray",
+        "rating": {
+            "stars": 5,
+            "count": 83
+        },
+        "priceCents": 1250,
+        "keywords": [
+            "hats",
+            "winter hats",
+            "beanies",
+            "tuques",
+            "apparel",
+            "womens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
+        "image": "/images//products/men-chino-pants-beige.jpg",
+        "name": "Men's Classic-fit Pleated Chino Pants",
+        "rating": {
+            "stars": 4.5,
+            "count": 9017
+        },
+        "priceCents": 2290,
+        "keywords": [
+            "pants",
+            "apparel",
+            "mens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "1c079479-8586-494f-ab53-219325432536",
+        "image": "/images//products/men-athletic-shoes-green.jpg",
+        "name": "Men's Athletic Sneaker",
+        "rating": {
+            "stars": 4,
+            "count": 229
+        },
+        "priceCents": 3890,
+        "keywords": [
+            "shoes",
+            "running shoes",
+            "footwear",
+            "mens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
+        "image": "/images//products/men-navigator-sunglasses-brown.jpg",
+        "name": "Men's Navigator Sunglasses Pilot",
+        "rating": {
+            "stars": 3.5,
+            "count": 42
+        },
+        "priceCents": 1690,
+        "keywords": [
+            "sunglasses",
+            "glasses",
+            "accessories",
+            "shades"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
+        "image": "/images//products/non-stick-cooking-set-15-pieces.webp",
+        "name": "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
+        "rating": {
+            "stars": 4.5,
+            "count": 511
+        },
+        "priceCents": 6797,
+        "keywords": [
+            "cooking set",
+            "kitchen"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
+        "image": "/images//products/vanity-mirror-silver.jpg",
+        "name": "Vanity Mirror with Heavy Base - Chrome",
+        "rating": {
+            "stars": 4.5,
+            "count": 130
+        },
+        "priceCents": 1649,
+        "keywords": [
+            "bathroom",
+            "washroom",
+            "mirrors",
+            "home"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
+        "image": "/images//products/women-french-terry-fleece-jogger-camo.jpg",
+        "name": "Women's Fleece Jogger Sweatpant",
+        "rating": {
+            "stars": 4.5,
+            "count": 248
+        },
+        "priceCents": 2400,
+        "keywords": [
+            "pants",
+            "sweatpants",
+            "jogging",
+            "apparel",
+            "womens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "d339adf3-e004-4c20-a120-40e8874c66cb",
+        "image": "/images//products/double-elongated-twist-french-wire-earrings.webp",
+        "name": "Double Oval Twist French Wire Earrings - Gold",
+        "rating": {
+            "stars": 4.5,
+            "count": 117
+        },
+        "priceCents": 2400,
+        "keywords": [
+            "accessories",
+            "womens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "d37a651a-d501-483b-aae6-a9659b0757a0",
+        "image": "/images//products/round-airtight-food-storage-containers.jpg",
+        "name": "Round Airtight Food Storage Containers - 5 Piece",
+        "rating": {
+            "stars": 4,
+            "count": 126
+        },
+        "priceCents": 2899,
+        "keywords": [
+            "boxes",
+            "food containers",
+            "kitchen"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
+        "image": "/images//products/coffeemaker-with-glass-carafe-black.jpg",
+        "name": "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
+        "rating": {
+            "stars": 4.5,
+            "count": 1211
+        },
+        "priceCents": 2250,
+        "keywords": [
+            "coffeemakers",
+            "kitchen",
+            "appliances"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
+        "image": "/images//products/blackout-curtains-black.jpg",
+        "name": "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
+        "rating": {
+            "stars": 4.5,
+            "count": 363
+        },
+        "priceCents": 3099,
+        "keywords": [
+            "bedroom",
+            "home"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "8a53b080-6d40-4a65-ab26-b24ecf700bce",
+        "image": "/images//products/cotton-bath-towels-teal.webp",
+        "name": "100% Cotton Bath Towels - 2 Pack, Light Teal",
+        "rating": {
+            "stars": 4.5,
+            "count": 93
+        },
+        "priceCents": 2110,
+        "keywords": [
+            "bathroom",
+            "home",
+            "towels"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "10ed8504-57db-433c-b0a3-fc71a35c88a1",
+        "image": "/images//products/knit-athletic-sneakers-pink.webp",
+        "name": "Waterproof Knit Athletic Sneakers - Pink",
+        "rating": {
+            "stars": 4,
+            "count": 89
+        },
+        "priceCents": 3390,
+        "keywords": [
+            "shoes",
+            "running shoes",
+            "footwear",
+            "womens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "77a845b1-16ed-4eac-bdf9-5b591882113d",
+        "image": "/images//products/countertop-blender-64-oz.jpg",
+        "name": "Countertop Blender - 64oz, 1400 Watts",
+        "rating": {
+            "stars": 4,
+            "count": 3
+        },
+        "priceCents": 10747,
+        "keywords": [
+            "food blenders",
+            "kitchen",
+            "appliances"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "36c64692-677f-4f58-b5ec-0dc2cf109e27",
+        "image": "/images//products/floral-mixing-bowl-set.jpg",
+        "name": "10-Piece Mixing Bowl Set with Lids - Floral",
+        "rating": {
+            "stars": 5,
+            "count": 679
+        },
+        "priceCents": 3899,
+        "keywords": [
+            "mixing bowls",
+            "baking",
+            "cookware",
+            "kitchen"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",  
+        "image": "/images//products/kitchen-paper-towels-30-pack.jpg",
+        "name": "2-Ply Kitchen Paper Towels - 30 Pack",
+        "rating": {
+            "stars": 4.5,
+            "count": 1045
+        },
+        "priceCents": 5799,
+        "keywords": [
+            "kitchen",
+            "kitchen towels",
+            "tissues"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    },
+    {
+        "id": "bc2847e9-5323-403f-b7cf-57fde044a955",
+        "image": "/images/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
+        "name": "Men's Full-Zip Hooded Fleece Sweatshirt",
+        "rating": {
+            "stars": 4.5,
+            "count": 3157
+        },
+        "priceCents": 2400,
+        "keywords": [
+            "sweaters",
+            "hoodies",
+            "apparel",
+            "mens"
+        ],
+        "colors": [
+            {
+                "name": "Red",
+                "class": "bg-red-500",
+                "selectedclass": "ring-red-500"
+            },
+            {
+                "name": "Blue",
+                "class": "bg-blue-500",
+                "selectedclass": "ring-blue-500"
+            },
+            {
+                "name": "Green",
+                "class": "bg-green-500",
+                "selectedclass": "ring-green-500"
+            },
+            {
+                "name": "Lime",
+                "class": "bg-lime-500",
+                "selectedclass": "ring-lime-500"
+            }
+        ],
+        "sizes": [
+            {
+                "name": "S",
+                "inStock": true
+            },
+            {
+                "name": "M",
+                "inStock": true
+            },
+            {
+                "name": "L",
+                "inStock": false
+            }
+        ]
+    }
+]
