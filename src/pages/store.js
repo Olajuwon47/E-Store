@@ -17,7 +17,7 @@ export default function Store() {
   const { addToCart } = useCart();
   const [loading, setLoading] =useState(false)
 
-  /*useEffect(() => {
+  useEffect(() => {
     async function fetchProducts() {
       try {
         setLoading(true);
@@ -60,41 +60,8 @@ export default function Store() {
       }
     }
     fetchProducts();
-  }, []);*/
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        setLoading(true);
-        const response = await fetch('http://localhost:3001/api/products', {
-          method: 'GET',
-          headers: {
-            "Content-Type": "application/json"
-          }
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log("API Response:", data); 
-        if (Array.isArray(data)) {
-          localStorage.setItem('/data/products.json', JSON.stringify(data));
-          setProducts(data);
-          setSelectedProduct(data[0]);
-          setSelectedColor(data[0]?.colors?.[0] || null);
-          setSelectedSize(data[0]?.sizes?.[0] || null);
-        } else {
-         // console.error("API response is not an array:", data);
-          setProducts([]); // Fallback to an empty array
-        }
-      } catch (error) {
-        console.error('Failed to fetch products:', error);
-        setProducts([]); // Fallback to an empty array
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchProducts();
   }, []);
+
        /* setLoading(true)
         const cachedData = localStorage.getItem('/data/products.json');
         if (cachedData) {

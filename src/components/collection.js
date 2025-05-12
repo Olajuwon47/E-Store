@@ -26,37 +26,14 @@ export default function Collection() {
                         <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                           <img
                             alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                            src="https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
                             className="size-full object-cover"
                           />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
                           <img
                             alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                            className="size-full object-cover"
-                          />
-                        </div>
-                      </div>
-                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img
-                            alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                            className="size-full object-cover"
-                          />
-                        </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img
-                            alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                            className="size-full object-cover"
-                          />
-                        </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img
-                            alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                            src="https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
                             className="size-full object-cover"
                           />
                         </div>
@@ -65,14 +42,37 @@ export default function Collection() {
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
                           <img
                             alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                            src="https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                             className="size-full object-cover"
                           />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
                           <img
                             alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                            src="https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                            className="size-full object-cover"
+                          />
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img
+                            alt=""
+                            src="https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                            className="size-full object-cover"
+                          />
+                        </div>
+                      </div>
+                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img
+                            alt=""
+                            src="https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                            className="size-full object-cover"
+                          />
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img
+                            alt=""
+                            src="https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                             className="size-full object-cover"
                           />
                         </div>
