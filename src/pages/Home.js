@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Carousel from './Carousel.js';
+import Subscribe from './Subscribe.js';
 export default function Collection() {
     return (
+    <>
       <div className="relative overflow-hidden bg-lime-50">
         <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
@@ -93,6 +96,9 @@ export default function Collection() {
           </div>
         </div>
       </div>
+         <Carousel/>
+          <Subscribe/>
+    </>
     )
   }
 

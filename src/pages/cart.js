@@ -135,7 +135,7 @@ export default function Cart() {
                       Checkout
                     </a>
                   </div>
-                  {/*<div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                  <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
                       or{' '}
                       <button
@@ -146,7 +146,7 @@ export default function Cart() {
                         Continue Shopping<span aria-hidden="true"> →</span>
                       </button>
                     </p>
-                  </div>*/}
+                  </div>
                 </div>
               </div>
             </DialogPanel>

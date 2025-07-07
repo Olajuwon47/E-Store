@@ -1,71 +1,67 @@
 // CartContext.js
-'use client';
-import { createContext, useContext, useState, useEffect } from 'react';
+'use client'
+import { createContext, useContext, useState, useEffect } from 'react'
 
-const CartContext = createContext();
+const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
-const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [])
-console.log(cartItems)
-const qua = cartItems.map(city=> city.quantity)
-//const [count, setCount] = useState(0);
+  const [cartItems, setCartItems] = useState([])
+
+  // ✅ Fixed: Proper quantity calculation
+  const qua = cartItems.reduce((total, item) => total + item.quantity, 0)
+
   const addToCart = (item) => {
-    const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
-    //console.log()
+    const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id)
+    
     if (isItemInCart) {
-    setCartItems(
-        cartItems.map((cartItem) => // if the item is already in the cart, increase the quantity of the item
-        cartItem.id === item.id
+      setCartItems(
+        cartItems.map((cartItem) =>
+          cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem // otherwise, return the cart item
+            : cartItem
         )
-    );
-    } else {
-    setCartItems([...cartItems, { ...item, quantity: 1 }]); // if the item is not in the cart, add the item to the cart
-    }
-  };
-   /* setCart((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === Products.id);
-      if (existingItem) {
-        return prevCart.map((item) =>
-          item.id === Products.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      } else {
-        return [...prevCart, { ...Products, quantity: 1 }];
-      }
-    });
-  };*/
-  const removeFromCart = (item) => {
-    const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
-  if (isItemInCart.quantity === 1) {
-    setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id)); // if the quantity of the item is 1, remove the item from the cart
-  } else {
-    setCartItems(
-      cartItems.map((cartItem) =>
-        cartItem.id === item.id
-          ? { ...cartItem, quantity: cartItem.quantity - 1 } // if the quantity of the item is greater than 1, decrease the quantity of the item
-          : cartItem
       )
-    );
+    } else {
+      setCartItems([...cartItems, { ...item, quantity: 1 }])
+    }
   }
-};
 
-const getCartTotal = () => {
-  return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-};
-
-useEffect(() => {
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
-}, [cartItems]);
-
-useEffect(() => {
-  const cartItems = localStorage.getItem("cartItems");
-  if (cartItems) {
-    setCartItems(JSON.parse(cartItems));
+  const removeFromCart = (item) => {
+    const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id)
+    
+    if (isItemInCart && isItemInCart.quantity === 1) {
+      setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id))
+    } else {
+      setCartItems(
+        cartItems.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        )
+      )
+    }
   }
-}, []);
+
+  const getCartTotal = () => {
+    return cartItems.reduce((total, item) => total + (item.priceCents || 0) * item.quantity, 0)
+  }
+
+  // ✅ Fixed: Load from localStorage on mount
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cartItems")
+    if (savedCart) {
+      try {
+        setCartItems(JSON.parse(savedCart))
+      } catch (error) {
+        console.error("Error loading cart from localStorage:", error)
+      }
+    }
+  }, [])
+
+  // ✅ Fixed: Save to localStorage when cart changes
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems))
+  }, [cartItems])
 
   return (
     <CartContext.Provider
@@ -73,13 +69,13 @@ useEffect(() => {
     >
       {children}
     </CartContext.Provider>
-  );
+  )
 }
 
 export const useCart = () => {
-  const context = useContext(CartContext);
+  const context = useContext(CartContext)
   if (!context) {
-    throw new Error('useCart must be used within a CartProvider');
+    throw new Error('useCart must be used within a CartProvider')
   }
-  return context;
-};
+  return context
+}
