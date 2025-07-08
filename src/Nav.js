@@ -204,7 +204,7 @@ export default function Nav() {
                 {/* Account */}
                 <div className="hidden lg:ml-4 lg:flex lg:items-center">
                   <span className="mx-4 h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="#" className="text-sm font-medium text-white hover:text-gray-100">
+                  <a href="/Login" className="text-sm font-medium text-white hover:text-gray-100">
                     Create account
                   </a>
                 </div>

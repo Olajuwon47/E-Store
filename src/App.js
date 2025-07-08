@@ -5,6 +5,7 @@ import About from './pages/About.js';
 import Orders from './pages/orders.js';
 import Track from './pages/track.js';
 import Contract from './pages/contract.js';
+import Login from './pages/Login/Login.js';
 import { Routes, Route } from "react-router-dom"; 
 import Nav from './Nav.js';
 import  Home from './pages/Home.js';
@@ -15,7 +16,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
-    <CartProvider>
+   <CartProvider>
     <>
       <Nav/>
       <Routes>
@@ -26,12 +27,13 @@ function App() {
         <Route path="contract" element={<Contract/>} />
         <Route path="orders" element={<Orders />}/>
         <Route path="track" element={<Track />}/>
-        {/* <Route path="Login" element={<Login />}/>
-        <Route path="Sign up" element={<Signup/>}/>*/}
+        <Route path="Login" element={<Login />}/>
+        {/*<Route path="Sign up" element={<Signup/>}/>*/}
       </Routes>
       <Footer/>
    </>
    </CartProvider>
+ 
   );
 }
 export default App;
