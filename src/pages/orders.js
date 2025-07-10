@@ -50,7 +50,7 @@ const Orders = () => {
                     </ul>
                   </div>
                   <div className="mt-4 flex justify-end">
-                    <Link to={`/track?orderId=${order.id}`} className="text-sm font-medium text-lime-600 hover:text-lime-500">
+                    <Link to={`/track/${order.id}`} className="text-sm font-medium text-lime-600 hover:text-lime-500">
                       Track Order <span aria-hidden="true">&rarr;</span>
                     </Link>
                   </div>

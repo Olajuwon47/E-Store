@@ -25,7 +25,7 @@ function App() {
         <Route path="About" element={<About/>} />
         <Route path="contract" element={<Contract/>} />
         <Route path="orders" element={<Orders />}/>
-        <Route path="track" element={<Track />}/>
+        <Route path="track/:orderId" element={<Track />}/>
         {/* <Route path="Login" element={<Login />}/>
         <Route path="Sign up" element={<Signup/>}/>*/}
       </Routes>

@@ -17,12 +17,25 @@ export const CartProvider = ({ children }) => {
       setCartItems(
         cartItems.map((cartItem) =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            ? {
+                ...cartItem, // Keep original cart item properties like when it was first added (if any are special)
+                // Update with details from the latest 'item' being added
+                name: item.name || item.title || cartItem.name,
+                priceCents: item.priceCents || cartItem.priceCents,
+                image: item.image || cartItem.image,
+                selectedColor: item.selectedColor, // Always update to latest selected color
+                selectedSize: item.selectedSize,   // Always update to latest selected size
+                quantity: cartItem.quantity + 1
+              }
             : cartItem
         )
       )
     } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }])
+      // Add new item, ensure all necessary fields are present
+      setCartItems([...cartItems, {
+        ...item,
+        quantity: 1
+      }])
     }
   }
 
@@ -63,9 +76,13 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems))
   }, [cartItems])
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, getCartTotal, qua }}
+      value={{ cartItems, addToCart, removeFromCart, getCartTotal, qua, clearCart }} // Add clearCart to context
     >
       {children}
     </CartContext.Provider>

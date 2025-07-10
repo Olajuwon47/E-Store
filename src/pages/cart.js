@@ -1,14 +1,17 @@
 'use client'
-import { useState } from 'react'
+// import { useState } from 'react' // No longer needed for 'open' state here
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useCart } from './Cart/cartcontext.js';
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-export default function Cart() {
-  const [open, setOpen] = useState(true)
-  const { cartItems, addToCart, removeFromCart } = useCart()
+export default function Cart({ open, setOpen }) { // Accept open and setOpen as props
+  // const [open, setOpen] = useState(true) // Removed local open state
+  const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } = useCart(); // Add clearCart and getCartTotal
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const notifyRemovedFromCart = (item) => toast.error(`${item.title} removed from cart!`, {
     position: 'top-center',
     autoClose: 2000,
@@ -32,9 +35,53 @@ export default function Cart() {
     (total, item) => total + item.priceCents * item.quantity,
     0
   ) / 100;
+
+  // If open is not true (e.g. undefined when routed directly), consider a default or how to handle.
+  // For now, it relies on the prop being passed correctly.
+  // If setOpen is not provided (e.g. when routed directly), closing the dialog via its own X button might cause an error.
+  // This could be handled by providing a default dummy function for setOpen if not passed.
+  const handleClose = () => {
+    if (setOpen) { // Check if setOpen is provided
+      setOpen(false);
+    } else {
+      // Optional: Navigate away or handle differently if it's a page context
+      // For now, it just won't do anything, preventing an error.
+      console.warn("setOpen is not defined in Cart component. Cannot close via internal button if not used as a modal with setOpen prop.");
+    }
+  };
+
+  const handleCheckout = () => {
+    if (cartItems.length === 0) {
+      toast.error("Your cart is empty!");
+      return;
+    }
+
+    const totalAmount = getCartTotal(); // Assuming getCartTotal returns amount in cents
+    const newOrder = {
+      id: Date.now().toString(),
+      items: [...cartItems], // Create a copy of cart items for the order
+      total: totalAmount,
+      date: new Date().toISOString(),
+      status: "Processing", // Initial status
+    };
+
+    try {
+      const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+      existingOrders.push(newOrder);
+      localStorage.setItem('orders', JSON.stringify(existingOrders));
+
+      toast.success("Order placed successfully!");
+      clearCart();
+      if (setOpen) setOpen(false); // Close the modal if it's a modal
+      navigate('/orders'); // Navigate to orders page
+    } catch (error) {
+      console.error("Error processing checkout:", error);
+      toast.error("There was an issue placing your order.");
+    }
+  };
   
   return (
-    <Dialog open={open} onClose={setOpen} className="relative z-10">
+    <Dialog open={open || false} onClose={handleClose} className="relative z-10">
       <DialogBackdrop className="fixed inset-0 bg-lime-50 bg-opacity-7   5 transition-opacity" />
       <div className="fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -128,12 +175,14 @@ export default function Cart() {
                     Shipping and taxes calculated.
                   </p>
                   <div className="mt-6">
-                    <a
-                      href="/store"
-                      className="flex Productss-center justify-center rounded-md border border-transparent bg-lime-50 px-6 py-3 text-base font-medium text-balack shadow-sm hover:bg-lime-100"
+                    <button
+                      type="button"
+                      onClick={handleCheckout}
+                      disabled={cartItems.length === 0}
+                      className="w-full flex items-center justify-center rounded-md border border-transparent bg-lime-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-lime-700 disabled:opacity-50"
                     >
                       Checkout
-                    </a>
+                    </button>
                   </div>
                   <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
