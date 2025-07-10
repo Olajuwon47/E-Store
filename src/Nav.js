@@ -4,6 +4,7 @@ import { Dialog, DialogBackdrop, DialogPanel, PopoverGroup } from '@headlessui/r
 import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 import './App.css';
 import Cart from './pages/cart.js';
+import { useCart } from './pages/Cart/cartcontext.js'; // Import useCart
 
 const navigation = {
   pages: [
@@ -21,7 +22,8 @@ export default function Nav() {
   const [cartOpen, setCartOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [cartItemsCount, setCartItemsCount] = useState(0); // You'll need to connect this to your actual cart state
+  // const [cartItemsCount, setCartItemsCount] = useState(0); // No longer needed, will use useCart
+  const { cartItems } = useCart(); // Get cartItems from context
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -65,7 +67,7 @@ export default function Nav() {
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                <a href="/Login" className="-m-2 block p-2 font-medium text-gray-900">
                   Create account
                 </a>
               </div>
@@ -121,7 +123,7 @@ export default function Nav() {
       <Cart open={cartOpen} setOpen={setCartOpen} />
 
       <header className="relative bg-lime-700">
-        <p className="flex h-10 items-center justify-center bg-lime-200 px-4 text-sm font-medium text-gray-900 sm:px-6 lg:px-8">
+        <p className="flex h-10 items-center justify-center beatFade bg-lime-200 px-4 text-sm font-medium text-gray-900 sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
 
@@ -207,6 +209,26 @@ export default function Nav() {
                   <a href="/Login" className="text-sm font-medium text-white hover:text-gray-100">
                     Create account
                   </a>
+                </div>
+
+                {/* Cart */}
+                <div className="ml-4 flow-root lg:ml-6">
+                  <button
+                    type="button"
+                    onClick={() => setCartOpen(true)}
+                    className="group -m-2 flex items-center p-2 relative"
+                  >
+                    <ShoppingBagIcon
+                      aria-hidden="true"
+                      className="h-6 w-6 flex-shrink-0 text-white group-hover:text-gray-100"
+                    />
+                    {cartItems.length > 0 && (
+                      <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-lime-700 rounded-full">
+                        {cartItems.length}
+                      </span>
+                    )}
+                    <span className="sr-only">items in cart, view bag</span>
+                  </button>
                 </div>
               </div>
             </div>

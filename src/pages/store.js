@@ -151,18 +151,6 @@ export default function Store() {
 
             
             </div>
-              {/* Cart */}
-              <div className="ml-4 flow-root lg:ml-6">
-                <a href="/cart" onClick={() => setCartOpen(true)} className="p-2 text-lime-700 hover:text-lime-900 relative">
-                  <span className="sr-only">Cart</span>
-                  <ShoppingCartIcon className="h-6 w-6" />
-                  {cartItems.length > 0 && (
-                    <span className="absolute -top-1 -right-1 inline-flex items-center justify-center px-3 py-1 text-xs font-bold leading-none text-lime-50 transform translate-x-1/2 -translate-y-1/2 bg-lime-700 rounded-full">
-                      {cartItems.length}
-                    </span>
-                  )}
-                </a>
-              </div>
             
           </div>
         </div>
