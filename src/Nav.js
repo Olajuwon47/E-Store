@@ -124,7 +124,7 @@ export default function Nav() {
 
       <header className="relative bg-lime-700">
         <p className="flex h-10 items-center justify-center beatFade bg-lime-200 px-4 text-sm font-medium text-gray-900 sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
+          🎉 Enjoy FREE delivery on orders over $100 Shop Now!
         </p>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -153,7 +153,7 @@ export default function Nav() {
               </div>
 
               {/* Desktop Navigation */}
-              <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
+              <PopoverGroup className=" hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="flex h-full space-x-8">
                   {navigation.pages.map((page) => (
                     <a

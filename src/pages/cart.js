@@ -190,7 +190,7 @@ export default function Cart({ open, setOpen }) { // Accept open and setOpen as 
                       <button
                         type="button"
                         onClick={() => setOpen(false)}
-                        className="font-medium text-indigo-600 hover:text-indigo-500"
+                        className="font-medium text-lime-500 hover:text-lime-200"
                       >
                         Continue Shopping<span aria-hidden="true"> →</span>
                       </button>

@@ -370,7 +370,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-500 transition-colors max-sm:py-1.5 max-sm:text-sm"
+              className="w-full bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-lime-200 transition-colors max-sm:py-1.5 max-sm:text-sm"
             >
               {isLoading ? (isRegistering ? 'Creating Account...' : 'Signing in...') : (isRegistering ? 'Create Account' : 'Sign in')}
             </button>
