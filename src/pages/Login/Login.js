@@ -18,6 +18,9 @@ export default function Login() {
   const [isRegistering, setIsRegistering] = useState(true)
   const navigate = useNavigate()
 
+  // Check if Supabase is properly configured
+  const isSupabaseConfigured = process.env.REACT_APP_SUPABASE_URL && process.env.REACT_APP_SUPABASE_ANON_KEY
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -64,56 +67,53 @@ export default function Login() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (!validateForm()) {
-      toast.error('Please fix the errors below')
-      return
-    }
-
-    setIsLoading(true)
-
-    try {
-      if (isRegistering) {
-        // Sign up with Supabase
-        const { data, error } = await supabase.auth.signUp({
-          email: formData.email,
-          password: formData.password,
-          options: {
-            data: {
-              username: formData.username,
-              first_name: formData.firstname,
-            }
+  const handleSubmitWithSupabase = async () => {
+    if (isRegistering) {
+      const { data, error } = await supabase.auth.signUp({
+        email: formData.email,
+        password: formData.password,
+        options: {
+          data: {
+            username: formData.username,
+            first_name: formData.firstname,
           }
-        })
-
-        if (error) {
-          toast.error(error.message)
-          return
         }
+      })
 
+      if (error) {
+        console.error('Supabase signup error:', error)
+        toast.error(error.message || 'Registration failed')
+        return false
+      }
+
+      if (data.user && !data.user.email_confirmed_at) {
         toast.success('Registration successful! Please check your email to verify your account.')
-        setIsRegistering(false)
-        setFormData({
-          username: '', firstname: '', email: '', password: '', confirmPassword: ''
-        })
       } else {
-        // Sign in with Supabase
-        const { data, error } = await supabase.auth.signInWithPassword({
-          email: formData.email,
-          password: formData.password,
-        })
+        toast.success('Registration successful!')
+      }
+      
+      setIsRegistering(false)
+      setFormData({
+        username: '', firstname: '', email: '', password: '', confirmPassword: ''
+      })
+      return true
+    } else {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: formData.email,
+        password: formData.password,
+      })
 
-        if (error) {
-          toast.error(error.message)
-          return
-        }
+      if (error) {
+        console.error('Supabase signin error:', error)
+        toast.error(error.message || 'Sign in failed')
+        return false
+      }
 
-        // Store user session data
+      if (data.user) {
         const userSession = {
           id: data.user.id,
           email: data.user.email,
-          username: data.user.user_metadata?.username || 'User',
+          username: data.user.user_metadata?.username || data.user.user_metadata?.first_name || 'User',
           loginTime: new Date().toISOString(),
           rememberMe
         }
@@ -127,8 +127,77 @@ export default function Login() {
           }))
         }
 
-        toast.success(`Welcome back, ${data.user.user_metadata?.username || 'User'}!`)
+        toast.success(`Welcome back, ${userSession.username}!`)
         setTimeout(() => navigate('/store'), 1000)
+        return true
+      }
+    }
+    return false
+  }
+
+  const handleSubmitWithLocalStorage = async () => {
+    await new Promise(resolve => setTimeout(resolve, 1500))
+    const users = JSON.parse(localStorage.getItem('users') || '[]')
+
+    if (isRegistering) {
+      const existing = users.find(u => u.email === formData.email)
+      if (existing) {
+        toast.error('Email already registered')
+        return false
+      }
+      const newUser = {
+        id: Date.now(),
+        ...formData
+      }
+      users.push(newUser)
+      localStorage.setItem('users', JSON.stringify(users))
+      toast.success('Registration successful! Please log in.')
+      setIsRegistering(false)
+      setFormData({
+        username: '', firstname: '', email: '', password: '', confirmPassword: ''
+      })
+      return true
+    }
+
+    const user = users.find(u => u.email === formData.email)
+    if (!user || user.password !== formData.password) {
+      toast.error('Invalid email or password')
+      return false
+    }
+
+    const userSession = {
+      id: user.id,
+      email: user.email,
+      username: user.username,
+      loginTime: new Date().toISOString(),
+      rememberMe
+    }
+    localStorage.setItem('currentUser', JSON.stringify(userSession))
+    if (rememberMe) {
+      localStorage.setItem('rememberedUser', JSON.stringify({
+        email: formData.email,
+        rememberMe: true
+      }))
+    }
+    toast.success(`Welcome back, ${user.username}!`)
+    setTimeout(() => navigate('/store'), 1000)
+    return true
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (!validateForm()) {
+      toast.error('Please fix the errors below')
+      return
+    }
+
+    setIsLoading(true)
+
+    try {
+      if (isSupabaseConfigured) {
+        await handleSubmitWithSupabase()
+      } else {
+        await handleSubmitWithLocalStorage()
       }
     } catch (error) {
       console.error('Auth error:', error)
@@ -139,6 +208,30 @@ export default function Login() {
   }
 
   const handleSocialLogin = async (provider) => {
+    if (!isSupabaseConfigured) {
+      // Mock social login for development
+      setIsLoading(true)
+      try {
+        await new Promise(resolve => setTimeout(resolve, 2000))
+        const mockSocialUser = {
+          id: Date.now(),
+          email: `user@${provider.toLowerCase()}.com`,
+          username: `${provider}User${Math.floor(Math.random() * 1000)}`,
+          provider,
+          loginTime: new Date().toISOString()
+        }
+        localStorage.setItem('currentUser', JSON.stringify(mockSocialUser))
+        toast.success(`Successfully signed in with ${provider}!`)
+        setTimeout(() => navigate('/store'), 1000)
+      } catch (error) {
+        toast.error(`${provider} login failed. Please try again.`)
+      } finally {
+        setIsLoading(false)
+      }
+      return
+    }
+
+    // Real Supabase OAuth
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
@@ -149,11 +242,18 @@ export default function Login() {
       })
 
       if (error) {
-        toast.error(`${provider} login failed: ${error.message}`)
+        console.error('OAuth error:', error)
+        
+        // Handle specific OAuth configuration errors
+        if (error.message.includes('OAuth') || error.message.includes('provider')) {
+          toast.error(`${provider} login is not configured yet. Please use email/password login.`)
+        } else {
+          toast.error(`${provider} login failed: ${error.message}`)
+        }
         return
       }
 
-      // The redirect will handle the success case
+      // OAuth redirect will handle success
     } catch (error) {
       console.error('Social login error:', error)
       toast.error(`${provider} login failed. Please try again.`)
@@ -194,9 +294,11 @@ export default function Login() {
   // Check for existing session on component mount
   useEffect(() => {
     const checkSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
-      if (session) {
-        navigate('/store')
+      if (isSupabaseConfigured) {
+        const { data: { session } } = await supabase.auth.getSession()
+        if (session) {
+          navigate('/store')
+        }
       }
     }
 
@@ -212,15 +314,17 @@ export default function Login() {
       }
     }
 
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN' && session) {
-        navigate('/store')
-      }
-    })
+    // Listen for auth changes only if Supabase is configured
+    if (isSupabaseConfigured) {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+        if (event === 'SIGNED_IN' && session) {
+          navigate('/store')
+        }
+      })
 
-    return () => subscription.unsubscribe()
-  }, [navigate])
+      return () => subscription.unsubscribe()
+    }
+  }, [navigate, isSupabaseConfigured])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-lime-50 to-lime-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 max-md:py-8 max-sm:py-4 max-sm:px-2">
